@@ -13,6 +13,32 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.4.0/Kulula-0.4.0.dmg" length="6994322" type="application/octet-stream" sparkle:edSignature="GS1dSd9D8vnohEDUmeH8KIXsCZXQtbYllBgibnDlDLIna+1CScYlj+oQTAGw8F/+WdmZdD/g4YaBdjAk2qs3CQ=="/>
+            <description sparkle:format="markdown"><![CDATA[Acqui Agents is now **Kulula**. Same app, new name and icon.
+
+**If you have Acqui Agents installed, this update will not reach it on its own.** Download the image below and install Kulula by hand, then drag the old app to the Trash. Your threads, settings and approval grants are picked up automatically on first launch, and updates after this one arrive the usual way.
+
+## You choose how much the broker answers for you
+
+A security level in the composer sets what gets approved without a card: Always Ask, the default, through Auto Mode, which answers anything confined to the workspace. Switching back to Always Ask also cancels any standing permission an engine is holding on its own, so the level you picked is the level in force. Permission escalations, pull request merges and releases always ask, at every level.
+
+## Shell commands are granted by what they run
+
+Approving a command once no longer leaves a rule that a differently-spelled version of a different command can slip through — a grant now covers the program and the paths it touches, not the text you approved. Commands that only read need no approval at all. Every grant stays listed and revocable in Settings.
+
+## Review loop
+
+- The findings picker shows what is still open, and keeps up as findings close.
+- A fix you completed stays marked fixed.
+- When Auto Fix cannot start, it tells you why and offers to create the branch instead of stopping without a reason.
+
+## Threads
+
+Switching to another thread and back no longer loses the transcript or what the inspector was showing.
+
+---
+
+Requires macOS 26 with Apple Intelligence, and `claude`, `codex` and `agy` installed on your login PATH and logged in.
+]]></description>
         </item>
         <item>
             <title>0.3.0</title>
@@ -35,6 +61,6 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: jnkNHE44SV7H/x/Vp4ptMpp3tXF/ZDG04m3nOjuBdB7hBiz8UKQcRwcfxYjWp5LoezWH8jzBYM4iHNo8lA8uAg==
-length: 2481
+edSignature: Ptr84UZZTDRKHqyEBqBv9Ju8UklXqem+6shE5CVUb3bvQtVNE+Cl8/HKo0kmTwFPr07l1J9hE5utHImFPwUuBw==
+length: 4238
 -->
