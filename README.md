@@ -1,4 +1,4 @@
-![Logo](./artwork/kulula.png)
+# <img src="artwork/kulula.png" width="48" align="center">
 
 # Kulula
 
