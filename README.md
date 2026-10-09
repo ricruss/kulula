@@ -24,7 +24,7 @@ To choose yourself, name the engine: `@claude`, `@codex`, `@agy` or `@local`. Ad
 
 ## Approval cards
 
-Nothing is written, run, committed or posted without a decision. Each request arrives as a card showing what was actually asked for: the command and its arguments, the paths it touches, the diff it wants to apply. Allow it, allow it for the session, allow it from now on, or deny it.
+Nothing is written, run, committed or posted without a decision, and the app makes that decision itself rather than handing the question to the engine. By default it is yours: a card shows what was actually asked for, the command and its arguments, the paths it touches, the diff it wants to apply, and you allow it, allow it for the session, allow it from now on, or deny it. The security level below sets how many of those cards you see.
 
 A standing grant covers the program and the paths it reaches rather than the text you approved, so approving one command does not let a differently spelled one through. Commands that provably only read need no approval. Grants stay listed and revocable in Settings.
 
@@ -39,8 +39,17 @@ One control in the composer sets how much the app answers on your behalf.
 | **Always Ask** | Asks for every call. Your grants are kept but not consulted. |
 | **Approval Mode** | The default. Asks for everything except commands that provably only read, and the rules you made with "Always allow". |
 | **Auto Mode** | Allows anything confined to the repository, including file writes and local git. Discarding uncommitted work still asks, and so does anything that leaves the machine. |
+| **Trust Mode** | Answers every request with no card at all, pushing and publishing and merging included. Confirmed once, by name, before it takes effect. |
 
-Merging a pull request, releasing, and any request to widen the app's own permissions ask at every level. Commands the app runs unattended are confined to the repository by the operating system, so a stray script cannot reach your home directory or another checkout.
+Below Trust Mode, merging a pull request, releasing and any request to widen the app's own permissions always ask. Trust Mode is the level that answers those, for when you have decided to let an engine finish a job unattended. It stores nothing and touches none of the rules you have made, so leaving it takes every answer back from the next request onward, and each answer it gives appears in the transcript naming the level that gave it.
+
+A question card is the exception: it appears at every level, Trust Mode included, since there is no answer the app could invent on your behalf. Commands the app runs unattended stay confined to the repository by the operating system at every level, so a stray script cannot reach your home directory or another checkout.
+
+### Asking a model before asking you
+
+Set an OpenAI API key in Settings and Auto Mode gains a step: a shell command it cannot place inside your repository goes to a model for an assessment rather than straight to a card, and that one call is allowed if it comes back safe enough. Anything less, an error, or an answer it cannot read still shows you the card.
+
+Some things never reach the model. Any program the app already has a rule about is one, so no assessment can allow `curl`, `sudo`, `git push` or a package install; so is anything whose arguments reach outside the repository, and any command line carrying what looks like a credential. Nothing is remembered either way, and every assessment appears in the transcript with the result it gave. None of this runs until you set the key.
 
 ## The pull request review loop
 
