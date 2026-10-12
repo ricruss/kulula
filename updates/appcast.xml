@@ -6,6 +6,54 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.6.0</title>
+            <pubDate>Mon, 12 Oct 2026 21:32:00 +0200</pubDate>
+            <sparkle:version>7</sparkle:version>
+            <sparkle:shortVersionString>0.6.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## The review panel is a column
+
+Dragging the right-hand panel wide used to kill the app outright. It is now the third column of the window rather than an inspector, so the divider, the live resize and the remembered width are the system's: drag it to any width and it stays there, and the transcript beside it holds its place while you do.
+
+## The panel stops acting on a pull request that has moved
+
+Every button in the review panel goes away while its own action is running, so a second click cannot start a second commit or post the same reply to GitHub twice. Beyond that:
+
+- **Ship** refuses while a fix round is editing the repository, instead of committing half of that work.
+- **Ship** and **Merge** check the pull request is still open, and tell you it has been merged or closed rather than failing with an error you have to interpret.
+- Switching pull requests clears the previous one's checks, mergeability, reviews and threads at the switch, so nothing you left behind is read under the new number.
+- **Fix**, **Confirm** and **Auto Fix** ask whether anything in the whole workspace is editing the checkout, not just the thread on screen. A turn running in another thread no longer lets a second engine loose on the same files.
+- The checkout button cannot start a second fetch of a branch while the first is still running.
+
+## A rejected push has a way out
+
+When git refuses a push, the panel used to offer one button that failed the same way however often you pressed it. There are three controls beside the error now: **Ask** sends it to the thread as a question, **Resolve** sends it with the intent to fix, and **Refresh** only re-reads git, for when you have already sorted it out in a terminal. Nothing force-pushes and nothing is granted — whatever the engine proposes arrives as a card like any other.
+
+## Fix
+
+- A fix goes to the engine you pinned in the composer. Reaching a limit on one engine and switching the thread to another no longer sends the fix straight back to the first.
+- The fixer is asked for the cause rather than the smallest change, and to carry the tests and comments the fix makes untrue — which is what tended to come back as the next round's findings.
+
+## Quieter reading
+
+- Timestamps in the review panel no longer tick and twitch as their digits change width. Rows show the time, and "Refreshed at 10:31" gives you "4 minutes ago" on hover.
+- A thread in the sidebar shows how long its turn has been running and then settles as the time that turn took, instead of a number climbing for as long as the app is open.
+- The transcript no longer decides you have scrolled away when the panel beside it was merely resized, or when a new message arrived under a stationary view.
+- The reviewing bot's own footer — "Useful? React with 👍 / 👎" and the link after it — is stripped out of findings, so it stays out of the reply drafted for you and out of the prompt the fixer is sent.
+- The pull request picker is ordered by number, newest first, so rows no longer reshuffle because something was commented on or labelled. You see this with "Show merged pull requests" on.
+
+## Fixed
+
+The Keychain authorisation panel no longer appears at launch in front of a window that has not drawn, which read as the app hanging. When it does appear, it names what it is asking for.
+
+---
+
+Requires macOS 26 with Apple Intelligence, and `claude`, `codex` and `agy` installed on your login PATH and logged in.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.6.0/Kulula-0.6.0.dmg" length="7160954" type="application/octet-stream" sparkle:edSignature="p9JeY8pIsn6ratoF9ioaPN4+HTZ+8CIbUkS4L+s3/NUpvZpAA13YaV3KSKw+TvR7ZK2WGVfYy+DF4yfz0qIFCg=="/>
+        </item>
+        <item>
             <title>0.5.0</title>
             <pubDate>Fri, 09 Oct 2026 15:42:14 +0200</pubDate>
             <sparkle:version>6</sparkle:version>
@@ -77,18 +125,9 @@ Switching to another thread and back no longer loses the transcript or what the 
 Requires macOS 26 with Apple Intelligence, and `claude`, `codex` and `agy` installed on your login PATH and logged in.
 ]]></description>
         </item>
-        <item>
-            <title>0.3.0</title>
-            <pubDate>Mon, 21 Sep 2026 08:50:27 +0200</pubDate>
-            <sparkle:version>4</sparkle:version>
-            <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/ricruss/acquiagents/releases/download/v0.3.0/AcquiAgents-0.3.0.dmg" length="6658835" type="application/octet-stream" sparkle:edSignature="kekniXRL26C/6ynlL11dg1g3UUBIQp9+hUbjo+x1qnLBvN2SWvXDGE3/2Ji3AoTT0MHxtmN4S4MI1fcZX8M5CA=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: Ae73OUqKT5enZOX95McM8+uxP0xkAUAgkjdysHXzGrtimZbUOCstHm3JHrKz19pQSCJfNZW+0S9EU0uY74DlDA==
-length: 7083
+edSignature: M5sk6yMBG9kuHKSfeKeaEOTTyqwcV34AxyxVFeacujIqTaZH0l7X6PuGz3F5NNwFhmfchOLCm46hSeKyOxyKAw==
+length: 10596
 -->
