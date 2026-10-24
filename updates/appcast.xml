@@ -6,6 +6,38 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.7.0</title>
+            <pubDate>Sat, 24 Oct 2026 15:12:13 +0200</pubDate>
+            <sparkle:version>8</sparkle:version>
+            <sparkle:shortVersionString>0.7.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Worktrees per branch
+
+Threads now work in isolated Git worktrees, one per branch, rather than sharing your main working tree. Multiple engines can work on different tasks simultaneously without overwriting files or stepping on each other's changes.
+
+• Subthreads spawned for new work get their own branch and worktree.
+• When a pull request is merged, its worktree is automatically cleaned up.
+• The review panel and review actions operate directly inside the pull request's worktree.
+• The disk space taken up by build products in linked worktrees is displayed.
+
+## Pull and Git error handoff in the review panel
+
+• **Pull**: A new Pull button appears when your local branch is behind its tracking upstream, letting you fast-forward safely before fixing or shipping.
+• **Resolve conflicts**: When a pull request conflicts with its target base branch, the panel offers a Resolve action to guide the agent in resolving the merge conflicts.
+• **Ask Agent**: Git errors (such as checkout contention or push rejections) offer an Ask Agent button to hand the exception directly to the thread's selected engine to diagnose and fix.
+
+## Quieter reviews
+
+Review findings strip out machine tracking comments and bot receipt tags added by automated review bots, keeping prompts and draft replies clean.
+
+---
+
+Requires macOS 26 with Apple Intelligence, and `claude`, `codex` and `agy` installed on your login PATH and logged in.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.7.0/Kulula-0.7.0.dmg" length="8277371" type="application/octet-stream" sparkle:edSignature="GdlrHncLE44/3rW9y33rPVICssBJ1w4YjcJCTIlpfOxsTqcwPfAXuil6gCBqRgrt0HN00u15EEa4wDMHV6pEDg=="/>
+        </item>
+        <item>
             <title>0.6.0</title>
             <pubDate>Mon, 12 Oct 2026 21:32:00 +0200</pubDate>
             <sparkle:version>7</sparkle:version>
@@ -90,44 +122,9 @@ Requires macOS 26 with Apple Intelligence, and `claude`, `codex` and `agy` insta
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.5.0/Kulula-0.5.0.dmg" length="7005959" type="application/octet-stream" sparkle:edSignature="0i0Ztdeh34RAGfaThwPMRAevtEdbJBTswazmSs1280nNcz+DhTfxDxoNH3a1XkFGAudy17ugnrDMaFN8OdqeDw=="/>
         </item>
-        <item>
-            <title>0.4.0</title>
-            <pubDate>Thu, 08 Oct 2026 09:23:37 +0200</pubDate>
-            <sparkle:version>5</sparkle:version>
-            <sparkle:shortVersionString>0.4.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.4.0/Kulula-0.4.0.dmg" length="6994322" type="application/octet-stream" sparkle:edSignature="GS1dSd9D8vnohEDUmeH8KIXsCZXQtbYllBgibnDlDLIna+1CScYlj+oQTAGw8F/+WdmZdD/g4YaBdjAk2qs3CQ=="/>
-            <description sparkle:format="markdown"><![CDATA[Acqui Agents is now **Kulula**. Same app, new name and icon.
-
-**If you have Acqui Agents installed, this update will not reach it on its own.** Download the image below and install Kulula by hand, then drag the old app to the Trash. Your threads, settings and approval grants are picked up automatically on first launch, and updates after this one arrive the usual way.
-
-## You choose how much the broker answers for you
-
-A security level in the composer sets what gets approved without a card: Always Ask, the default, through Auto Mode, which answers anything confined to the workspace. Switching back to Always Ask also cancels any standing permission an engine is holding on its own, so the level you picked is the level in force. Permission escalations, pull request merges and releases always ask, at every level.
-
-## Shell commands are granted by what they run
-
-Approving a command once no longer leaves a rule that a differently-spelled version of a different command can slip through — a grant now covers the program and the paths it touches, not the text you approved. Commands that only read need no approval at all. Every grant stays listed and revocable in Settings.
-
-## Review loop
-
-- The findings picker shows what is still open, and keeps up as findings close.
-- A fix you completed stays marked fixed.
-- When Auto Fix cannot start, it tells you why and offers to create the branch instead of stopping without a reason.
-
-## Threads
-
-Switching to another thread and back no longer loses the transcript or what the inspector was showing.
-
----
-
-Requires macOS 26 with Apple Intelligence, and `claude`, `codex` and `agy` installed on your login PATH and logged in.
-]]></description>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: M5sk6yMBG9kuHKSfeKeaEOTTyqwcV34AxyxVFeacujIqTaZH0l7X6PuGz3F5NNwFhmfchOLCm46hSeKyOxyKAw==
-length: 10596
+edSignature: zI2AN4ECZG2AkA4+IqtFyEMoA40nLy5Ojoo6O4L7SdWdlXIops7aPRb/6AXfPbaNCL1NSJ7VxK892ksq2KLfAQ==
+length: 10352
 -->
