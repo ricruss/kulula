@@ -6,6 +6,25 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.8.0</title>
+            <pubDate>Sun, 25 Oct 2026 23:07:16 +0200</pubDate>
+            <sparkle:version>9</sparkle:version>
+            <sparkle:shortVersionString>0.8.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# What’s new in Kulula 0.8.0
+
+- Choose Claude or Codex, and a model, for local pull request reviews.
+- New subthreads inherit the selected engine and model. You can choose the branch where a subthread starts.
+- The sidebar shows the model last used in each thread, and you can switch models while continuing a provider conversation.
+- Composer suggestions make it quicker to enter supported commands and mentions.
+- Copy a completed turn from the transcript. Inline code is now easier to read.
+- Pull request review state is retained when you switch threads, and the app refreshes branch divergence after an engine turn.
+- Auto Fix reports its progress more clearly and handles interrupted Gemini output as a failed fix.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.8.0/Kulula-0.8.0.dmg" length="8448638" type="application/octet-stream" sparkle:edSignature="mHHunmMfMN6z6zNHfRR1Lyvm3Yv6uk+7yNylvcGMat6O/UGKrNF4gkrT557kjVHFIMpYO34qj+KVAVRnWVxCBA=="/>
+        </item>
+        <item>
             <title>0.7.0</title>
             <pubDate>Sat, 24 Oct 2026 15:12:13 +0200</pubDate>
             <sparkle:version>8</sparkle:version>
@@ -85,46 +104,9 @@ Requires macOS 26 with Apple Intelligence, and `claude`, `codex` and `agy` insta
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.6.0/Kulula-0.6.0.dmg" length="7160954" type="application/octet-stream" sparkle:edSignature="p9JeY8pIsn6ratoF9ioaPN4+HTZ+8CIbUkS4L+s3/NUpvZpAA13YaV3KSKw+TvR7ZK2WGVfYy+DF4yfz0qIFCg=="/>
         </item>
-        <item>
-            <title>0.5.0</title>
-            <pubDate>Fri, 09 Oct 2026 15:42:14 +0200</pubDate>
-            <sparkle:version>6</sparkle:version>
-            <sparkle:shortVersionString>0.5.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Trust Mode
-
-A fourth security level in the composer, at the far end of the dial, for when you have decided to let an engine finish a job and do not want to be asked again. It answers every approval request from every engine with no card: writing and deleting anywhere its shell can reach, pushing, publishing, merging a pull request, resolving a thread on GitHub, and a request to widen this app's own permissions. Entering it asks you to confirm once, and tells you what you are turning off.
-
-What it does not change. Commands the app runs unattended stay sandboxed. Every answer still appears in the transcript, naming the level that gave it. And nothing is remembered: the level writes no rules and touches none of the ones you made, so leaving it takes every answer back from the next request onward.
-
-A question a model asks *you* still comes up as a card at every level, including this one, because there is no answer the app could invent on your behalf.
-
-## Auto Mode can ask a model before it asks you
-
-Set an OpenAI API key in Settings, and a shell command Auto Mode cannot place inside your repository goes to a model for an assessment instead of straight to a card. If it comes back safe enough, that one call is allowed; anything less, an error, or an unreadable answer still shows you the card. Nothing is remembered either way, and every assessment appears in the transcript with the result it gave.
-
-What never reaches the model: any program the app already has a rule about, so no assessment can allow `curl`, `sudo`, `git push` or a package install; anything whose arguments reach outside the repository; and any command line carrying something that looks like a credential. Leaving Auto Mode while an assessment is in flight withdraws its authority — the card comes back.
-
-This does nothing until you set the key. Assessments are also written to a diagnostic log in your temporary directory; the switch for that is in Settings, beside the key, and it is on.
-
-## Far fewer approval cards with Claude Code
-
-A `cd` or a `PATH=` in one command used to leave every command after it in that thread asking for approval, on the assumption that the shell carried on. It does not: each call gets a fresh shell at the repository root. Commands after one of those are now answered by the rules of the level you picked, like any other. A `cd` *within* a single command line still counts, because there the shell really is shared.
-
-## Fixed
-
-Switching between pull request branches in the review panel could spin the app into a beachball and then quit it without warning. The inspector still keeps its width across a thread switch, as before.
-
----
-
-Requires macOS 26 with Apple Intelligence, and `claude`, `codex` and `agy` installed on your login PATH and logged in.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.5.0/Kulula-0.5.0.dmg" length="7005959" type="application/octet-stream" sparkle:edSignature="0i0Ztdeh34RAGfaThwPMRAevtEdbJBTswazmSs1280nNcz+DhTfxDxoNH3a1XkFGAudy17ugnrDMaFN8OdqeDw=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: zI2AN4ECZG2AkA4+IqtFyEMoA40nLy5Ojoo6O4L7SdWdlXIops7aPRb/6AXfPbaNCL1NSJ7VxK892ksq2KLfAQ==
-length: 10352
+edSignature: laMveFYtqXcEI7Qer4fvzihmTj/Feg51bWJW0Uh42zj6jOzJl8JqlknpQDGcYJDzAd0PP3OWispr3ZpNsO8ZBQ==
+length: 8298
 -->
