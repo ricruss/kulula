@@ -6,6 +6,22 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.10.0</title>
+            <pubDate>Tue, 27 Oct 2026 21:14:48 +0200</pubDate>
+            <sparkle:version>11</sparkle:version>
+            <sparkle:shortVersionString>0.10.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[- Pin threads to keep important work close at hand, with a shorter recent-thread list for each project.
+- Copy transcript messages and follow live turn progress. Submitted messages appear immediately, and streamed responses keep a steadier layout.
+- Choose models for review fixes, retain review filters as you navigate, and see a review log scoped to the selected pull request.
+- Enjoy clearer review actions, severity badges, refresh indicators, and Auto Fix startup status. Pull is disabled for merged pull requests.
+- The right-hand panel remembers its width across relaunches.
+- Open plan usage from Status, check Git and GitHub CLI availability, and see whether a Decisions API key is configured in Settings.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.10.0/Kulula-0.10.0.dmg" length="8583640" type="application/octet-stream" sparkle:edSignature="RYZvjVSlVyA52DrKm9O9eXXSWAnQh4HIlvF+fXvf1sH/En1m8f1CkzhqicPrmih01QgldxRskF5hE2HRYqZxDg=="/>
+        </item>
+        <item>
             <title>0.9.0</title>
             <pubDate>Mon, 26 Oct 2026 23:27:56 +0200</pubDate>
             <sparkle:version>10</sparkle:version>
@@ -42,41 +58,9 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.8.0/Kulula-0.8.0.dmg" length="8448638" type="application/octet-stream" sparkle:edSignature="mHHunmMfMN6z6zNHfRR1Lyvm3Yv6uk+7yNylvcGMat6O/UGKrNF4gkrT557kjVHFIMpYO34qj+KVAVRnWVxCBA=="/>
         </item>
-        <item>
-            <title>0.7.0</title>
-            <pubDate>Sat, 24 Oct 2026 15:12:13 +0200</pubDate>
-            <sparkle:version>8</sparkle:version>
-            <sparkle:shortVersionString>0.7.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Worktrees per branch
-
-Threads now work in isolated Git worktrees, one per branch, rather than sharing your main working tree. Multiple engines can work on different tasks simultaneously without overwriting files or stepping on each other's changes.
-
-• Subthreads spawned for new work get their own branch and worktree.
-• When a pull request is merged, its worktree is automatically cleaned up.
-• The review panel and review actions operate directly inside the pull request's worktree.
-• The disk space taken up by build products in linked worktrees is displayed.
-
-## Pull and Git error handoff in the review panel
-
-• **Pull**: A new Pull button appears when your local branch is behind its tracking upstream, letting you fast-forward safely before fixing or shipping.
-• **Resolve conflicts**: When a pull request conflicts with its target base branch, the panel offers a Resolve action to guide the agent in resolving the merge conflicts.
-• **Ask Agent**: Git errors (such as checkout contention or push rejections) offer an Ask Agent button to hand the exception directly to the thread's selected engine to diagnose and fix.
-
-## Quieter reviews
-
-Review findings strip out machine tracking comments and bot receipt tags added by automated review bots, keeping prompts and draft replies clean.
-
----
-
-Requires macOS 26 with Apple Intelligence, and `claude`, `codex` and `agy` installed on your login PATH and logged in.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.7.0/Kulula-0.7.0.dmg" length="8277371" type="application/octet-stream" sparkle:edSignature="GdlrHncLE44/3rW9y33rPVICssBJ1w4YjcJCTIlpfOxsTqcwPfAXuil6gCBqRgrt0HN00u15EEa4wDMHV6pEDg=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: Mw2f+JUfu80Mcavp1wKe//aXDJiNAQcFJf5Itonxot/WivGibcPlzNgsH2TM4OEg2HoJijU13sxHDTSpNEYgCA==
-length: 5427
+edSignature: XBQxsXFrygRggCLzhm/5WstbD1jHefs3GC2DLBN+bTe7vadNR+b4x0u2eMdT9l7xjsG2ZxJGTMqLgxw+i222Dg==
+length: 4712
 -->
