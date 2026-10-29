@@ -77,6 +77,14 @@ When a thread moves to another engine, the on-device model writes a short brief 
 
 Everything is stored locally. Quit and reopen, and threads, transcripts, grants and both CLI sessions resume.
 
+Add this section after **Auto Fix**:
+
+## Test queue
+
+The Inspector's Tests tab brings project test runs together. Kulula discovers individual tests where the project supports it, so you can run a single test or the full suite and see which tests passed, failed, have not run yet, or need rerunning after a change.
+
+Runs started from the Tests tab, requested by an engine, or started by Auto Fix share a queue. You can choose how many runs happen at once; others wait their turn, and the checkout stays protected while a test process is still using it. Engines can request tests by their listed identifiers and get the result back in the thread. Test commands remain subject to the usual approval and workspace protections.
+
 ## Engine status
 
 The Status tab lists each engine, whether it is available, the plan usage it reports, and a warning when an installed tool has drifted from the version the build was tested against.
