@@ -6,6 +6,27 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.11.0</title>
+            <pubDate>Fri, 30 Oct 2026 01:32:56 +0200</pubDate>
+            <sparkle:version>12</sparkle:version>
+            <sparkle:shortVersionString>0.11.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Review pull requests with multiple engines
+
+Run Claude, Codex, and Antigravity against a pull request diff at the same time. Kulula brings their findings together, highlights where they agree or disagree, and can use the results to guide Auto Fix rounds. You choose which engines take part in Settings; standalone reviews remain available.
+
+## Work through reviews more clearly
+
+Review findings and controls are easier to follow in the review panel, with improved filtering, layout, and progress feedback. You can now choose the engine and model for review fixes and local reviews, and see clearer status when a review is running or blocked.
+
+## More reliable conversations
+
+Approvals and engine responses are handled more consistently, including when a turn is cancelled or an engine session is replaced. The app also checks for updates at launch and hourly.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.11.0/Kulula-0.11.0.dmg" length="9064846" type="application/octet-stream" sparkle:edSignature="aAHmaIk/ysQ1V06cn9sHSYp+L/+33tflAlCbt7nqtTX0KknmaKkWwmumAxgJAPP3to4DbKB5p7dy0UhJVI1cAQ=="/>
+        </item>
+        <item>
             <title>0.10.0</title>
             <pubDate>Tue, 27 Oct 2026 21:14:48 +0200</pubDate>
             <sparkle:version>11</sparkle:version>
@@ -39,28 +60,9 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.9.0/Kulula-0.9.0.dmg" length="8519918" type="application/octet-stream" sparkle:edSignature="VzqhPZfT4vCJM+cdOdyi3jlaBugAxFRoqtqPT8WpDtTo3twmtaMGbVLGxmTdkDKIGVjEVhHF2xJs8aKVbyRiBQ=="/>
         </item>
-        <item>
-            <title>0.8.0</title>
-            <pubDate>Sun, 25 Oct 2026 23:07:16 +0200</pubDate>
-            <sparkle:version>9</sparkle:version>
-            <sparkle:shortVersionString>0.8.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# What’s new in Kulula 0.8.0
-
-- Choose Claude or Codex, and a model, for local pull request reviews.
-- New subthreads inherit the selected engine and model. You can choose the branch where a subthread starts.
-- The sidebar shows the model last used in each thread, and you can switch models while continuing a provider conversation.
-- Composer suggestions make it quicker to enter supported commands and mentions.
-- Copy a completed turn from the transcript. Inline code is now easier to read.
-- Pull request review state is retained when you switch threads, and the app refreshes branch divergence after an engine turn.
-- Auto Fix reports its progress more clearly and handles interrupted Gemini output as a failed fix.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.8.0/Kulula-0.8.0.dmg" length="8448638" type="application/octet-stream" sparkle:edSignature="mHHunmMfMN6z6zNHfRR1Lyvm3Yv6uk+7yNylvcGMat6O/UGKrNF4gkrT557kjVHFIMpYO34qj+KVAVRnWVxCBA=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: XBQxsXFrygRggCLzhm/5WstbD1jHefs3GC2DLBN+bTe7vadNR+b4x0u2eMdT9l7xjsG2ZxJGTMqLgxw+i222Dg==
-length: 4712
+edSignature: xVPvKhhVBRylyb0r31NQVvmXrdgLf34zGfLxztDxMC31K8PeRRuinWiPRfifhu/LfYBNDTxArrTvoefBWwoLDA==
+length: 4857
 -->
