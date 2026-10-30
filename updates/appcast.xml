@@ -6,6 +6,27 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.12.0</title>
+            <pubDate>Sat, 31 Oct 2026 00:30:43 +0200</pubDate>
+            <sparkle:version>13</sparkle:version>
+            <sparkle:shortVersionString>0.12.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Work through pull request reviews
+
+Choose an engine and model for local reviews and fixes, and run multi-engine reviews to compare findings. Review controls, progress, and status are clearer, and fix choices stay available as you move between review tabs.
+
+## Keep conversations organized
+
+Name and pin threads, move between them more easily, and restore composer input history. Drafts and pull request context stay with the right thread as you switch conversations.
+
+## More reliable work on branches
+
+Kulula now shows branch and checkout status more clearly, helps route work to the right thread, and handles review and checkout actions more reliably. Live progress and completion notifications make long-running work easier to follow.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.12.0/Kulula-0.12.0.dmg" length="9213045" type="application/octet-stream" sparkle:edSignature="4rA7U8nIOjgcHnErdYA6Fs/NQJrh7rCDpns+3F+bKqZP2kTz+rqQGyRQL7v6+msnlp74KBlqO0U2TPQddL/cBg=="/>
+        </item>
+        <item>
             <title>0.11.0</title>
             <pubDate>Fri, 30 Oct 2026 01:32:56 +0200</pubDate>
             <sparkle:version>12</sparkle:version>
@@ -42,27 +63,9 @@ Approvals and engine responses are handled more consistently, including when a t
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.10.0/Kulula-0.10.0.dmg" length="8583640" type="application/octet-stream" sparkle:edSignature="RYZvjVSlVyA52DrKm9O9eXXSWAnQh4HIlvF+fXvf1sH/En1m8f1CkzhqicPrmih01QgldxRskF5hE2HRYqZxDg=="/>
         </item>
-        <item>
-            <title>0.9.0</title>
-            <pubDate>Mon, 26 Oct 2026 23:27:56 +0200</pubDate>
-            <sparkle:version>10</sparkle:version>
-            <sparkle:shortVersionString>0.9.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# What’s new in Kulula 0.9.0
-
-- Get a system notification when a thread needs your input or finishes in the background.
-- Refresh pull request findings manually, and find closed pull requests under the History filter.
-- See Claude session limits and clearer usage warnings in Status.
-- Keep composer drafts when switching threads, navigate suggestions with the keyboard, and use slash action suggestions after model mentions.
-- Select inline transcript notes and read longer approval commands without truncation.
-- Continue thread work after a worktree moves or is lost.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.9.0/Kulula-0.9.0.dmg" length="8519918" type="application/octet-stream" sparkle:edSignature="VzqhPZfT4vCJM+cdOdyi3jlaBugAxFRoqtqPT8WpDtTo3twmtaMGbVLGxmTdkDKIGVjEVhHF2xJs8aKVbyRiBQ=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: xVPvKhhVBRylyb0r31NQVvmXrdgLf34zGfLxztDxMC31K8PeRRuinWiPRfifhu/LfYBNDTxArrTvoefBWwoLDA==
-length: 4857
+edSignature: QhuOJNRPRBIXFQoEqDhND0yB+SBRVuZobFKdTAk1PiqqcgFkHs2eaOTnPZPTOV1mcDJCusNogLT14DJdcsOYAg==
+length: 5029
 -->
