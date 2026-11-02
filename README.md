@@ -1,12 +1,12 @@
 # <img src="artwork/kulula.png" width="48" align="center">
 
-# <img src="artwork/kulula-screenshot.png" width="100%" align="center">
-
 # Kulula
 
 A native macOS app that puts Claude Code, Codex, Google's Antigravity CLI and Apple's on-device model behind one chat window, with approval cards for every tool call and a pull request review loop.
 
 This repository holds the released builds and the Sparkle update feed. The application is not open source; the source lives in a private repository.
+
+# <img src="artwork/kulula-screenshot.png" width="100%" align="center">
 
 ## Install
 
