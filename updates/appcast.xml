@@ -6,6 +6,27 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.14.0</title>
+            <pubDate>Mon, 02 Nov 2026 20:25:28 +0200</pubDate>
+            <sparkle:version>15</sparkle:version>
+            <sparkle:shortVersionString>0.14.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Safer branch and worktree management
+
+See branches, worktrees, and their matching pull requests together. Start work in a safe worktree from the current conversation, reuse an existing worktree for a subthread, and remove branches and worktrees with clearer safeguards.
+
+## More useful review fixes
+
+Choose how Auto Fix builds and tests after changes, rerun failed tests, and follow review progress in the conversation. Fixes check findings before acting and explain what they defer.
+
+## Clearer conversations and test results
+
+Keep the conversation at the latest response as cards finish laying out, open file links directly from the transcript, and see more useful details when tests fail.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.14.0/Kulula-0.14.0.dmg" length="9730297" type="application/octet-stream" sparkle:edSignature="7NofmPodM6QNh0KmEgtBPATpIuIRYDbECsU1aH0npeyYz1ob0cubKYDYft+Px9RrhzHgTVZrQPBVuBiDW+KACQ=="/>
+        </item>
+        <item>
             <title>0.13.0</title>
             <pubDate>Sun, 01 Nov 2026 00:15:15 +0200</pubDate>
             <sparkle:version>14</sparkle:version>
@@ -47,30 +68,9 @@ Kulula now shows branch and checkout status more clearly, helps route work to th
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.12.0/Kulula-0.12.0.dmg" length="9213045" type="application/octet-stream" sparkle:edSignature="4rA7U8nIOjgcHnErdYA6Fs/NQJrh7rCDpns+3F+bKqZP2kTz+rqQGyRQL7v6+msnlp74KBlqO0U2TPQddL/cBg=="/>
         </item>
-        <item>
-            <title>0.11.0</title>
-            <pubDate>Fri, 30 Oct 2026 01:32:56 +0200</pubDate>
-            <sparkle:version>12</sparkle:version>
-            <sparkle:shortVersionString>0.11.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Review pull requests with multiple engines
-
-Run Claude, Codex, and Antigravity against a pull request diff at the same time. Kulula brings their findings together, highlights where they agree or disagree, and can use the results to guide Auto Fix rounds. You choose which engines take part in Settings; standalone reviews remain available.
-
-## Work through reviews more clearly
-
-Review findings and controls are easier to follow in the review panel, with improved filtering, layout, and progress feedback. You can now choose the engine and model for review fixes and local reviews, and see clearer status when a review is running or blocked.
-
-## More reliable conversations
-
-Approvals and engine responses are handled more consistently, including when a turn is cancelled or an engine session is replaced. The app also checks for updates at launch and hourly.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.11.0/Kulula-0.11.0.dmg" length="9064846" type="application/octet-stream" sparkle:edSignature="aAHmaIk/ysQ1V06cn9sHSYp+L/+33tflAlCbt7nqtTX0KknmaKkWwmumAxgJAPP3to4DbKB5p7dy0UhJVI1cAQ=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: MRaskMCa+kMs14xkGSed+vSM4UjryASZLwFJz/gC4k4Wicj27AQddIpZ9iR7bqpYfwjFPE36UwcoBQvWlfufCA==
-length: 5034
+edSignature: bomJTK9s8yP1nKWQ4m/B5PrInKETw0F/Wam6Sg48Dv12i5cq9pl6oOUft7ijtFNZYpmEusM78KLIkaAofPISAQ==
+length: 4866
 -->
