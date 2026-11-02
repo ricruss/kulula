@@ -99,6 +99,7 @@ The Status tab lists each engine, whether it is available, the plan usage it rep
 
 - macOS 26 or later with Apple Intelligence enabled.
 - The `claude`, `codex` and `agy` command line tools installed and logged in.
+- Git and the GitHub CLI (`gh`) installed and available on your `PATH`.
 
 Kulula runs on the plans you already have and adds no subscription of its own. Antigravity needs a one-time approval hook, which Settings installs for you.
 
