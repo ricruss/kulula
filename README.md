@@ -65,6 +65,12 @@ Open, Fixed, Dismissed and All filters each carry a count, and merged pull reque
 
 The same loop left to run, with a cap on rounds and on minutes that both count down on screen. A round is fix, build, test, and optionally a fresh review. It stops on either cap, on a round that changed nothing, or on a build that fails. It works within the permissions you have already given and never grants itself anything, so on a machine with no grants it is exactly as interactive as clicking Fix yourself.
 
+## Branches and worktrees
+
+The Inspector's Branches tab brings local and remote branches together with their worktrees. Search and filter the inventory, see matching pull requests and whether a checkout has local changes, and refresh the view as work progresses.
+
+Start the current conversation in a new worktree to give it an isolated branch and checkout, or start a subthread in a new branch or an existing worktree. Existing threads and their work are left in place. Before deleting a branch or removing a worktree, Kulula previews what will be affected and checks for active threads and uncommitted changes; it will not discard local work as part of cleanup.
+
 ## Threads that stay on their branch
 
 A thread is bound to the branch it works on and, when the work came from a review, to its pull request. Before a fix, commit, push, reply or merge, Kulula checks that the branch, the pull request and the checkout agree. If they do not it blocks the action and offers a way back rather than acting on the wrong code. Reading and discussing another pull request stays safe.
