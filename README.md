@@ -1,6 +1,6 @@
 # <img src="artwork/kulula.png" width="40" align="left"> Kulula
 
-A native macOS app that puts Claude Code, Codex, Google's Antigravity CLI and Apple's on-device model behind one chat window, with approval cards for every tool call and a pull request review loop.
+A native macOS app that puts Claude Code, Codex, Google's Antigravity CLI, Grok Build and Apple's on-device model behind one chat window, with approval cards for every tool call and a pull request review loop.
 
 <img src="artwork/kulula-screenshot.png" width="100%" align="center">
 
@@ -8,9 +8,9 @@ A native macOS app that puts Claude Code, Codex, Google's Antigravity CLI and Ap
 
 Download the latest `.dmg` from [Releases](https://github.com/ricruss/kulula/releases), open it and drag the app to Applications. The app is signed with a Developer ID certificate and notarized by Apple. It checks this feed for updates once a day and never installs one without asking.
 
-## One window, four engines
+## One window, five engines
 
-Add a repository, start a thread, type. Kulula runs the command line tools you already have — `claude`, `codex` and `agy` — as background processes and renders what they do in a single transcript: text, collapsible reasoning, tool calls with their output and exit code, and diffs per file. Apple's on-device model answers the short turns itself.
+Add a repository, start a thread, type. Kulula runs the command line tools you already have — `claude`, `codex`, `agy` and `grok` — as background processes and renders what they do in a single transcript: text, collapsible reasoning, tool calls with their output and exit code, and diffs per file. Apple's on-device model answers the short turns itself.
 
 Threads sit in the sidebar under their repository, each showing which engine answered last, a spinner while a turn runs and a badge while something is waiting on you.
 
@@ -18,7 +18,7 @@ Threads sit in the sidebar under their repository, each showing which engine ans
 
 Every turn is routed on device: quick questions stay local, edits go to Claude Code, second opinions go to Codex. The route and the reason for it show above the composer, and one click sends the same turn elsewhere.
 
-To choose yourself, name the engine: `@claude`, `@codex`, `@agy` or `@local`. Add a model to pin it for the thread, as in `@claude:opus`.
+To choose yourself, name the engine: `@claude`, `@codex`, `@agy`, `@grok` or `@local`. Add a model to pin it for the thread, as in `@claude:opus`.
 
 ## Approval cards
 
@@ -96,7 +96,7 @@ The Status tab lists each engine, whether it is available, the plan usage it rep
 ## Requirements
 
 - macOS 26 or later with Apple Intelligence enabled.
-- The `claude`, `codex` and `agy` command line tools installed and logged in.
+- The `claude`, `codex`, `agy` and `grok` command line tools installed and logged in for the engines you want to use. Grok Build can also use an xAI API key saved in Settings.
 - Git and the GitHub CLI (`gh`) installed and available on your `PATH`.
 
 Kulula runs on the plans you already have and adds no subscription of its own. Antigravity needs a one-time approval hook, which Settings installs for you.
