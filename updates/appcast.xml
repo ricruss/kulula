@@ -6,6 +6,27 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.15.0</title>
+            <pubDate>Wed, 04 Nov 2026 01:34:43 +0200</pubDate>
+            <sparkle:version>16</sparkle:version>
+            <sparkle:shortVersionString>0.15.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Grok support
+
+Use Grok for conversations and code review, including Grok Build through ACP.
+
+## Project and worktree settings
+
+Choose local or remote repository sources, configure worktree folders and commands per project, and start a subthread from a conversation's context menu.
+
+## Review workflow improvements
+
+Manage local branches from the Review panel, see review actions and Auto Fix progress in the conversation, and apply selected fixes in the order shown. Ask an agent for help when worktree cleanup fails.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.15.0/Kulula-0.15.0.dmg" length="10107392" type="application/octet-stream" sparkle:edSignature="1Z6vqveOxvysLiA0jWsaOLdMzrKYzvDmv/puGjC0xvtZKmocYzeykidA11kj0XOZJwqmEh97m2Kvr6//yyTbBg=="/>
+        </item>
+        <item>
             <title>0.14.0</title>
             <pubDate>Mon, 02 Nov 2026 20:25:28 +0200</pubDate>
             <sparkle:version>15</sparkle:version>
@@ -47,30 +68,9 @@ Pull request selection follows the current thread, and merge status and refresh 
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.13.0/Kulula-0.13.0.dmg" length="9383692" type="application/octet-stream" sparkle:edSignature="SJOP27AHGqgwqgVK8VVc12eWsH8tjkce4eplHRrKQCVonWysWI5vzk5+ldhko0FrwVBjCTmZju0IXsQS9BkAAg=="/>
         </item>
-        <item>
-            <title>0.12.0</title>
-            <pubDate>Sat, 31 Oct 2026 00:30:43 +0200</pubDate>
-            <sparkle:version>13</sparkle:version>
-            <sparkle:shortVersionString>0.12.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Work through pull request reviews
-
-Choose an engine and model for local reviews and fixes, and run multi-engine reviews to compare findings. Review controls, progress, and status are clearer, and fix choices stay available as you move between review tabs.
-
-## Keep conversations organized
-
-Name and pin threads, move between them more easily, and restore composer input history. Drafts and pull request context stay with the right thread as you switch conversations.
-
-## More reliable work on branches
-
-Kulula now shows branch and checkout status more clearly, helps route work to the right thread, and handles review and checkout actions more reliably. Live progress and completion notifications make long-running work easier to follow.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.12.0/Kulula-0.12.0.dmg" length="9213045" type="application/octet-stream" sparkle:edSignature="4rA7U8nIOjgcHnErdYA6Fs/NQJrh7rCDpns+3F+bKqZP2kTz+rqQGyRQL7v6+msnlp74KBlqO0U2TPQddL/cBg=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: bomJTK9s8yP1nKWQ4m/B5PrInKETw0F/Wam6Sg48Dv12i5cq9pl6oOUft7ijtFNZYpmEusM78KLIkaAofPISAQ==
-length: 4866
+edSignature: vD0RaZS98cDH6Ax7HF0joBc7YAKbWkQjb9o1E6d7rul6lgSQgHDituSh0OIC33CSxSEd6dZ0JXQCSzJLa5dJCw==
+length: 4647
 -->
