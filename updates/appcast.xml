@@ -6,6 +6,23 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.16.0</title>
+            <pubDate>Wed, 04 Nov 2026 23:49:55 +0200</pubDate>
+            <sparkle:version>17</sparkle:version>
+            <sparkle:shortVersionString>0.16.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Review workflow
+
+Start Auto Fix even when a review has no findings, manage checkouts and local branches from the Review panel, and use collapsible sections to keep the panel focused. Auto Fix now shows its next actions in the conversation and reaches the commit step faster.
+
+## Engine status
+
+See Grok and Antigravity availability in the app.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.16.0/Kulula-0.16.0.dmg" length="10112753" type="application/octet-stream" sparkle:edSignature="v8FaKoJ5Ol8ntl+MzYBFnj2dQKbVR6M7OGO2US+GSvqxnZZwCOse+pcHtCd7BhU6qCBdT0N8HsuygDGH0q6rDw=="/>
+        </item>
+        <item>
             <title>0.15.0</title>
             <pubDate>Wed, 04 Nov 2026 01:34:43 +0200</pubDate>
             <sparkle:version>16</sparkle:version>
@@ -47,30 +64,9 @@ Keep the conversation at the latest response as cards finish laying out, open fi
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.14.0/Kulula-0.14.0.dmg" length="9730297" type="application/octet-stream" sparkle:edSignature="7NofmPodM6QNh0KmEgtBPATpIuIRYDbECsU1aH0npeyYz1ob0cubKYDYft+Px9RrhzHgTVZrQPBVuBiDW+KACQ=="/>
         </item>
-        <item>
-            <title>0.13.0</title>
-            <pubDate>Sun, 01 Nov 2026 00:15:15 +0200</pubDate>
-            <sparkle:version>14</sparkle:version>
-            <sparkle:shortVersionString>0.13.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## More control over review fixes
-
-Choose whether Auto Fix builds and tests after a fix, and follow adversarial review progress in the conversation. Stop interrupts more of the work in progress. Fixes check review findings before acting and explain findings that are deferred.
-
-## Clearer test runs
-
-Filter test runs by status, see their elapsed time, and give agents more useful details when tests fail. The test queue releases checkout holds when a timed-out process has finished.
-
-## Smoother review and conversation navigation
-
-Pull request selection follows the current thread, and merge status and refresh controls are clearer. The conversation stays at the bottom as streamed content and cards finish laying out.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.13.0/Kulula-0.13.0.dmg" length="9383692" type="application/octet-stream" sparkle:edSignature="SJOP27AHGqgwqgVK8VVc12eWsH8tjkce4eplHRrKQCVonWysWI5vzk5+ldhko0FrwVBjCTmZju0IXsQS9BkAAg=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: vD0RaZS98cDH6Ax7HF0joBc7YAKbWkQjb9o1E6d7rul6lgSQgHDituSh0OIC33CSxSEd6dZ0JXQCSzJLa5dJCw==
-length: 4647
+edSignature: sT4HrSITfI5oaxX3trXF6bXYgx2WgYv1+tFOzPiekDWqDXS5DK0p5JT0rSjDGPYwCS58QIn1Rb6QcCi2iABrDw==
+length: 4275
 -->
