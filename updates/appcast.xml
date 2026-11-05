@@ -6,6 +6,23 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.17.0</title>
+            <pubDate>Thu, 05 Nov 2026 20:57:34 +0200</pubDate>
+            <sparkle:version>18</sparkle:version>
+            <sparkle:shortVersionString>0.17.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Scheduled conversations
+
+Schedule conversations to run automatically and review their upcoming run times. Completed runs stay organized in the conversation with a bounded history, so you can follow recent results without an ever-growing transcript.
+
+## Easier scheduling controls
+
+Adjust schedules and branch settings from clearer controls, and move between scheduled runs directly in Chat.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.17.0/Kulula-0.17.0.dmg" length="10376483" type="application/octet-stream" sparkle:edSignature="Y0dmiENEPjLAXb58Afsm/nWhfzYNy0FSxUfXhK9Y+pyy+X96dPa7LB1hyb1MA7M8x3wPobN6sIMwosBqQy0uDw=="/>
+        </item>
+        <item>
             <title>0.16.0</title>
             <pubDate>Wed, 04 Nov 2026 23:49:55 +0200</pubDate>
             <sparkle:version>17</sparkle:version>
@@ -43,30 +60,9 @@ Manage local branches from the Review panel, see review actions and Auto Fix pro
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.15.0/Kulula-0.15.0.dmg" length="10107392" type="application/octet-stream" sparkle:edSignature="1Z6vqveOxvysLiA0jWsaOLdMzrKYzvDmv/puGjC0xvtZKmocYzeykidA11kj0XOZJwqmEh97m2Kvr6//yyTbBg=="/>
         </item>
-        <item>
-            <title>0.14.0</title>
-            <pubDate>Mon, 02 Nov 2026 20:25:28 +0200</pubDate>
-            <sparkle:version>15</sparkle:version>
-            <sparkle:shortVersionString>0.14.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Safer branch and worktree management
-
-See branches, worktrees, and their matching pull requests together. Start work in a safe worktree from the current conversation, reuse an existing worktree for a subthread, and remove branches and worktrees with clearer safeguards.
-
-## More useful review fixes
-
-Choose how Auto Fix builds and tests after changes, rerun failed tests, and follow review progress in the conversation. Fixes check findings before acting and explain what they defer.
-
-## Clearer conversations and test results
-
-Keep the conversation at the latest response as cards finish laying out, open file links directly from the transcript, and see more useful details when tests fail.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.14.0/Kulula-0.14.0.dmg" length="9730297" type="application/octet-stream" sparkle:edSignature="7NofmPodM6QNh0KmEgtBPATpIuIRYDbECsU1aH0npeyYz1ob0cubKYDYft+Px9RrhzHgTVZrQPBVuBiDW+KACQ=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: sT4HrSITfI5oaxX3trXF6bXYgx2WgYv1+tFOzPiekDWqDXS5DK0p5JT0rSjDGPYwCS58QIn1Rb6QcCi2iABrDw==
-length: 4275
+edSignature: MBUdfMJUBOtz8PVmhbMSSF/rjqHWAnvXjRQMxAk2h0YtFgT2hYuNvN2W4KSU/kebeYp7EDkeUHw63tffEnF/Dw==
+length: 3975
 -->
