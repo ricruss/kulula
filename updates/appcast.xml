@@ -6,6 +6,23 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.18.0</title>
+            <pubDate>Sat, 07 Nov 2026 00:52:11 +0200</pubDate>
+            <sparkle:version>19</sparkle:version>
+            <sparkle:shortVersionString>0.18.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Files and code review
+
+Browse local changes in the Files tab with a per-file diff viewer, and review pull requests with clearer checkout and branch controls.
+
+## More reliable conversations
+
+Keep pull request selection aligned with the active conversation, see which engines are available for your setup, and use the standardized Antigravity connection.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.18.0/Kulula-0.18.0.dmg" length="10830621" type="application/octet-stream" sparkle:edSignature="pwiwNdybF6jqcpdjIzI9n9UKf8s4ZaVOYAImXiIlGymDJlYXb5iSI27Rg40mrK3y/pd7VnQ0FE47XzcxKweBCw=="/>
+        </item>
+        <item>
             <title>0.17.0</title>
             <pubDate>Thu, 05 Nov 2026 20:57:34 +0200</pubDate>
             <sparkle:version>18</sparkle:version>
@@ -39,30 +56,9 @@ See Grok and Antigravity availability in the app.
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.16.0/Kulula-0.16.0.dmg" length="10112753" type="application/octet-stream" sparkle:edSignature="v8FaKoJ5Ol8ntl+MzYBFnj2dQKbVR6M7OGO2US+GSvqxnZZwCOse+pcHtCd7BhU6qCBdT0N8HsuygDGH0q6rDw=="/>
         </item>
-        <item>
-            <title>0.15.0</title>
-            <pubDate>Wed, 04 Nov 2026 01:34:43 +0200</pubDate>
-            <sparkle:version>16</sparkle:version>
-            <sparkle:shortVersionString>0.15.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Grok support
-
-Use Grok for conversations and code review, including Grok Build through ACP.
-
-## Project and worktree settings
-
-Choose local or remote repository sources, configure worktree folders and commands per project, and start a subthread from a conversation's context menu.
-
-## Review workflow improvements
-
-Manage local branches from the Review panel, see review actions and Auto Fix progress in the conversation, and apply selected fixes in the order shown. Ask an agent for help when worktree cleanup fails.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.15.0/Kulula-0.15.0.dmg" length="10107392" type="application/octet-stream" sparkle:edSignature="1Z6vqveOxvysLiA0jWsaOLdMzrKYzvDmv/puGjC0xvtZKmocYzeykidA11kj0XOZJwqmEh97m2Kvr6//yyTbBg=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: MBUdfMJUBOtz8PVmhbMSSF/rjqHWAnvXjRQMxAk2h0YtFgT2hYuNvN2W4KSU/kebeYp7EDkeUHw63tffEnF/Dw==
-length: 3975
+edSignature: 0hpUHAq7RrDz63fRQlW6FYfIvSWlV5FsQXSVzb9Q/H06EvnMY/5Hfw1JjyfLgV++5I28MNpqR2RmJwt7R1lfCA==
+length: 3811
 -->
