@@ -1,12 +1,29 @@
 # <img src="artwork/kulula.png" width="40" align="left"> Kulula
 
-A native macOS app that puts Claude Code, Codex, Google's Antigravity CLI, Grok Build and Apple's on-device model behind one chat window, with approval cards for every tool call and a pull request review loop.
+Your AI coding subscriptions, working together in one native Mac app. Use Claude Code, Codex, Google's Antigravity CLI, Grok Build and Apple's on-device model to write code, review pull requests and run recurring tasks — with one conversation history and controls over what agents can do.
+
+**Bring your own subscriptions. Kulula adds no subscription of its own.** Connect the command line tools you already use and keep using your existing provider accounts.
 
 <img src="artwork/kulula-screenshot.png" width="100%" align="center">
 
 ## Install
 
 Download the latest `.dmg` from [Releases](https://github.com/ricruss/kulula/releases), open it and drag the app to Applications. The app is signed with a Developer ID certificate and notarized by Apple. It checks this feed for updates once a day and never installs one without asking.
+
+## Why Kulula?
+
+- **Use several coding agents in one workflow.** Choose an engine and model, let on-device routing choose, or hand a conversation to another engine with a brief of the work so far.
+- **Get a second opinion before you ship.** Bring review findings into a worklist, ask another engine to assess them, and work through fixes, tests and re-review.
+- **Put recurring work on a schedule.** Run repository prompts on a timetable, inspect each run, and continue the result in chat.
+- **Work on separate changes in separate worktrees.** Give a conversation its own branch and checkout, with checks that keep actions on the intended branch.
+- **Keep tests and fixes moving.** Queue project tests and use Auto Fix for bounded rounds of fixes, builds and tests.
+- **Choose how much to delegate.** Use approval cards for hands-on control or select a security level for more autonomous work, with decisions visible in the transcript.
+
+## Bring your own subscriptions
+
+Kulula uses your installed coding CLIs and their existing logins. If you already use Claude Code, Codex, Antigravity or Grok Build, you can bring those accounts into one app. Install and connect only the engines you want to use.
+
+Provider plan limits and billing still apply; Kulula does not include model usage or add a subscription of its own. Apple's on-device model handles routing and short local turns. Grok Build can also use your xAI API key, and the optional model-based approval assessment uses your OpenAI API key; API usage is billed separately by the provider.
 
 ## One window, five engines
 
@@ -63,6 +80,22 @@ Open, Fixed, Dismissed and All filters each carry a count, and merged pull reque
 
 The same loop left to run, with a cap on rounds and on minutes that both count down on screen. A round is fix, build, test, and optionally a fresh review. It stops on either cap, on a round that changed nothing, or on a build that fails. It works within the permissions you have already given and never grants itself anything, so on a machine with no grants it is exactly as interactive as clicking Fix yourself.
 
+## Test queue
+
+The Inspector's Tests tab brings project test runs together. Kulula discovers individual tests where the project supports it, so you can run a single test or the full suite and see which tests passed, failed, have not run yet, or need rerunning after a change.
+
+Runs started from the Tests tab, requested by an engine, or started by Auto Fix share a queue. You can choose how many runs happen at once; others wait their turn, and the checkout stays protected while a test process is still using it. Engines can request tests by their listed identifiers and get the result back in the thread. Test commands remain subject to the usual approval and workspace protections.
+
+## Scheduled tasks
+
+Turn a prompt into a recurring task for a repository: a morning summary of recent changes, a weekly review of test coverage, or a regular check for documentation that needs updating.
+
+Open Schedules in the sidebar and add a schedule under a workspace. Set the prompt, choose an engine and model or leave routing on Auto, then choose a time zone and recurrence: every few minutes, daily, weekly, monthly, annually, or a custom five-field cron expression. The editor previews the upcoming occurrence.
+
+Use **Run Now** to try a schedule immediately, or disable it to pause future runs. Each run has a status and a linked conversation in its schedule's history. Open a completed run and choose **Continue in Chat** to follow up on its findings.
+
+Schedules run locally while Kulula is open and your Mac is awake. Missed occurrences are not replayed, and an occurrence is skipped if that schedule is still running. Scheduled turns use the app's current security mode and normal approval flow; the security control in the editor changes the app-wide mode, not just that schedule. A run can wait for your approval or an answer to a question.
+
 ## Branches and worktrees
 
 The Inspector's Branches tab brings local and remote branches together with their worktrees. Search and filter the inventory, see matching pull requests and whether a checkout has local changes, and refresh the view as work progresses.
@@ -81,14 +114,6 @@ When a thread moves to another engine, the on-device model writes a short brief 
 
 Everything is stored locally. Quit and reopen, and threads, transcripts, grants and both CLI sessions resume.
 
-Add this section after **Auto Fix**:
-
-## Test queue
-
-The Inspector's Tests tab brings project test runs together. Kulula discovers individual tests where the project supports it, so you can run a single test or the full suite and see which tests passed, failed, have not run yet, or need rerunning after a change.
-
-Runs started from the Tests tab, requested by an engine, or started by Auto Fix share a queue. You can choose how many runs happen at once; others wait their turn, and the checkout stays protected while a test process is still using it. Engines can request tests by their listed identifiers and get the result back in the thread. Test commands remain subject to the usual approval and workspace protections.
-
 ## Engine status
 
 The Status tab lists each engine, whether it is available, the plan usage it reports, and a warning when an installed tool has drifted from the version the build was tested against.
@@ -104,3 +129,4 @@ Kulula runs on the plans you already have and adds no subscription of its own. A
 ## Terms
 
 The binaries are provided as is, for personal use, all rights reserved. No warranty.
+
