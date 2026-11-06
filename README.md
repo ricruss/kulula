@@ -18,6 +18,7 @@ Download the latest `.dmg` from [Releases](https://github.com/ricruss/kulula/rel
 - **Work on separate changes in separate worktrees.** Give a conversation its own branch and checkout, with checks that keep actions on the intended branch.
 - **Keep tests and fixes moving.** Queue project tests and use Auto Fix for bounded rounds of fixes, builds and tests.
 - **Choose how much to delegate.** Use approval cards for hands-on control or select a security level for more autonomous work, with decisions visible in the transcript.
+- **Keep unattended commands contained.** macOS sandboxing limits where app-run builds, tests and other unattended commands can write, including in Trust Mode.
 
 ## Bring your own subscriptions
 
@@ -58,11 +59,17 @@ One control in the composer sets how much the app answers on your behalf.
 
 Below Trust Mode, merging a pull request, releasing and any request to widen the app's own permissions always ask. Trust Mode is the level that answers those, for when you have decided to let an engine finish a job unattended. It stores nothing and touches none of the rules you have made, so leaving it takes every answer back from the next request onward, and each answer it gives appears in the transcript naming the level that gave it.
 
-A question card is the exception: it appears at every level, Trust Mode included, since there is no answer the app could invent on your behalf. Commands the app runs unattended stay confined to the repository by the operating system at every level, so a stray script cannot reach your home directory or another checkout.
+A question card is the exception: it appears at every level, Trust Mode included, since there is no answer the app could invent on your behalf.
+
+### Sandboxed execution
+
+Approval controls decide whether an action may proceed. For commands Kulula runs unattended, macOS also enforces where they can write. Builds and tests are confined to the workspace, the per-user temporary directory and system device paths. App-managed Git operations can additionally write to the specific Git metadata paths needed for a linked worktree.
+
+This protection stays in place at every security level, including Trust Mode. If the sandbox is unavailable, Kulula refuses those commands rather than running them unconfined. Reads outside the workspace remain possible, subject to macOS permissions: this is write containment, not a promise that commands cannot read other files. Provider CLIs also have their own execution and permission mechanisms.
 
 ### Asking a model before asking you
 
-Set an OpenAI API key in Settings and Auto Mode gains a step: a shell command it cannot place inside your repository goes to a model for an assessment rather than straight to a card, and that one call is allowed if it comes back safe enough. Anything less, an error, or an answer it cannot read still shows you the card.
+Set an OpenAI API key in Settings and Auto Mode gains a step: an otherwise unclassified shell command whose arguments stay inside your repository can go to a model for an assessment rather than straight to a card. That one call is allowed if it comes back safe enough. Anything less, an error, or an answer it cannot read still shows you the card.
 
 Some things never reach the model. Any program the app already has a rule about is one, so no assessment can allow `curl`, `sudo`, `git push` or a package install; so is anything whose arguments reach outside the repository, and any command line carrying what looks like a credential. Nothing is remembered either way, and every assessment appears in the transcript with the result it gave. None of this runs until you set the key.
 
@@ -112,7 +119,7 @@ Switching the checkout needs a clean tree and no running turn, and is previewed 
 
 When a thread moves to another engine, the on-device model writes a short brief — the goal, the files touched, what was decided, what is still open — and hands it over, since neither engine can see the other's context. The brief appears in the transcript.
 
-Everything is stored locally. Quit and reopen, and threads, transcripts, grants and both CLI sessions resume.
+Conversation history and approval grants are stored locally. Reopen Kulula to pick up your threads, with provider session resume where supported. Requests sent to a cloud engine are still processed by that provider.
 
 ## Engine status
 
