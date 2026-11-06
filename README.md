@@ -4,7 +4,7 @@ Your AI coding subscriptions, working together in one native Mac app. Use Claude
 
 **Bring your own subscriptions. Kulula adds no subscription of its own.** Connect the command line tools you already use and keep using your existing provider accounts.
 
-<img src="artwork/kulula-screenshot.png" width="100%" align="center">
+<img src="artwork/kulula-screenshot.webp" alt="Kulula" width="100%" align="center">
 
 ## Install
 
