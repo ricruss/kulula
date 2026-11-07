@@ -93,6 +93,28 @@ The Inspector's Tests tab brings project test runs together. Kulula discovers in
 
 Runs started from the Tests tab, requested by an engine, or started by Auto Fix share a queue. You can choose how many runs happen at once; others wait their turn, and the checkout stays protected while a test process is still using it. Engines can request tests by their listed identifiers and get the result back in the thread. Test commands remain subject to the usual approval and workspace protections.
 
+## Work with Xcode
+
+Connect Claude Code, Codex, Antigravity CLI or Grok CLI to Xcode's Model Context Protocol (MCP) tools to work with Xcode projects, workspaces and simulators from a Kulula conversation.
+
+1. In Xcode, enable external agent access in **Settings > Intelligence > Model Context Protocol**, then open the project or workspace.
+2. In Kulula, open **Settings > Xcode MCP**. It shows whether an Xcode MCP server is registered for each detected CLI and provides the setup commands.
+3. Register the CLI you want to use from Terminal. For example:
+
+   ```bash
+   codex mcp add xcode -- xcrun mcpbridge
+   ```
+
+   Other supported CLIs:
+
+   ```bash
+   claude mcp add --scope user --transport stdio xcode -- xcrun mcpbridge
+   agy mcp add xcode xcrun mcpbridge
+   grok mcp add --scope user xcode -- xcrun mcpbridge
+   ```
+
+These commands update the CLI's user-level MCP configuration; Kulula checks the registration but does not configure it automatically. When the agent calls an Xcode tool, approve the CLI request using Kulula's usual approval card. Xcode may also ask you to authorize the agent and the project path. If the first simulator boot or launch fails, start that simulator once from Xcode and retry.
+
 ## Scheduled tasks
 
 Turn a prompt into a recurring task for a repository: a morning summary of recent changes, a weekly review of test coverage, or a regular check for documentation that needs updating.
