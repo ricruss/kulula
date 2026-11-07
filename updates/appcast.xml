@@ -6,6 +6,23 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.20.0</title>
+            <pubDate>Sat, 07 Nov 2026 22:40:50 +0200</pubDate>
+            <sparkle:version>21</sparkle:version>
+            <sparkle:shortVersionString>0.20.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Connect Codex to Xcode
+
+Register Xcode’s development tools from Settings and handle Xcode requests directly in your conversation.
+
+## More capable reviews
+
+Use live web search with Codex by default, and get clearer controls for reviewing pull requests and fixing issues automatically.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.20.0/Kulula-0.20.0.dmg" length="11002931" type="application/octet-stream" sparkle:edSignature="qUByYY3UtkQXXod9Gui9Op3Nc5jWfnEs0cE7EZtqTf3DFv3ze5WtACADmPvPIub4WdmTPsuaSaUCVv5sLInIDQ=="/>
+        </item>
+        <item>
             <title>0.19.0</title>
             <pubDate>Sat, 07 Nov 2026 13:36:53 +0200</pubDate>
             <sparkle:version>20</sparkle:version>
@@ -35,26 +52,9 @@ Keep pull request selection aligned with the active conversation, see which engi
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.18.0/Kulula-0.18.0.dmg" length="10830621" type="application/octet-stream" sparkle:edSignature="pwiwNdybF6jqcpdjIzI9n9UKf8s4ZaVOYAImXiIlGymDJlYXb5iSI27Rg40mrK3y/pd7VnQ0FE47XzcxKweBCw=="/>
         </item>
-        <item>
-            <title>0.17.0</title>
-            <pubDate>Thu, 05 Nov 2026 20:57:34 +0200</pubDate>
-            <sparkle:version>18</sparkle:version>
-            <sparkle:shortVersionString>0.17.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Scheduled conversations
-
-Schedule conversations to run automatically and review their upcoming run times. Completed runs stay organized in the conversation with a bounded history, so you can follow recent results without an ever-growing transcript.
-
-## Easier scheduling controls
-
-Adjust schedules and branch settings from clearer controls, and move between scheduled runs directly in Chat.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.17.0/Kulula-0.17.0.dmg" length="10376483" type="application/octet-stream" sparkle:edSignature="Y0dmiENEPjLAXb58Afsm/nWhfzYNy0FSxUfXhK9Y+pyy+X96dPa7LB1hyb1MA7M8x3wPobN6sIMwosBqQy0uDw=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: g6sysEydpi+L9ptzi9iT18kxOAi1SPUo+/qa28dV4DA0GJL0oQVYpgxQ45E6+7Lp7A4aPpwFrJJfHBjA3sNDDA==
-length: 3706
+edSignature: P1QTU/Gz5hw13tBDsjgYBkNkPFAeQ7x6xplVpXFnW4bVrvzmB+CfdrI9k1m7fZwAjOzbp+QDNaVM0qbZmH7YBg==
+length: 3602
 -->
