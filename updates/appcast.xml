@@ -6,6 +6,19 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.19.0</title>
+            <pubDate>Sat, 07 Nov 2026 13:36:53 +0200</pubDate>
+            <sparkle:version>20</sparkle:version>
+            <sparkle:shortVersionString>0.19.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Compare files with recent commits
+
+Choose a recent branch commit to compare against your working files, review its changed file list, and open individual historical diffs. File rows also show whether each change is in the active checkout.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.19.0/Kulula-0.19.0.dmg" length="10896856" type="application/octet-stream" sparkle:edSignature="NvNI76GgGncIR47VF0KaEQ2Q5bw0lgRMRHplzgFfTOulrfuxdo6OJnG2UAJTlxDZiKktNKz/FWZJGuk0hgKEDw=="/>
+        </item>
+        <item>
             <title>0.18.0</title>
             <pubDate>Sat, 07 Nov 2026 00:52:11 +0200</pubDate>
             <sparkle:version>19</sparkle:version>
@@ -39,26 +52,9 @@ Adjust schedules and branch settings from clearer controls, and move between sch
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.17.0/Kulula-0.17.0.dmg" length="10376483" type="application/octet-stream" sparkle:edSignature="Y0dmiENEPjLAXb58Afsm/nWhfzYNy0FSxUfXhK9Y+pyy+X96dPa7LB1hyb1MA7M8x3wPobN6sIMwosBqQy0uDw=="/>
         </item>
-        <item>
-            <title>0.16.0</title>
-            <pubDate>Wed, 04 Nov 2026 23:49:55 +0200</pubDate>
-            <sparkle:version>17</sparkle:version>
-            <sparkle:shortVersionString>0.16.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Review workflow
-
-Start Auto Fix even when a review has no findings, manage checkouts and local branches from the Review panel, and use collapsible sections to keep the panel focused. Auto Fix now shows its next actions in the conversation and reaches the commit step faster.
-
-## Engine status
-
-See Grok and Antigravity availability in the app.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.16.0/Kulula-0.16.0.dmg" length="10112753" type="application/octet-stream" sparkle:edSignature="v8FaKoJ5Ol8ntl+MzYBFnj2dQKbVR6M7OGO2US+GSvqxnZZwCOse+pcHtCd7BhU6qCBdT0N8HsuygDGH0q6rDw=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: 0hpUHAq7RrDz63fRQlW6FYfIvSWlV5FsQXSVzb9Q/H06EvnMY/5Hfw1JjyfLgV++5I28MNpqR2RmJwt7R1lfCA==
-length: 3811
+edSignature: g6sysEydpi+L9ptzi9iT18kxOAi1SPUo+/qa28dV4DA0GJL0oQVYpgxQ45E6+7Lp7A4aPpwFrJJfHBjA3sNDDA==
+length: 3706
 -->
