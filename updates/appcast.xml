@@ -6,6 +6,27 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.21.0</title>
+            <pubDate>Mon, 09 Nov 2026 01:05:24 +0200</pubDate>
+            <sparkle:version>22</sparkle:version>
+            <sparkle:shortVersionString>0.21.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Continue a thread in an existing worktree
+
+Pick up a thread in a worktree you already have instead of creating a new one, and cleaning up a finished worktree no longer freezes the window.
+
+## Clearer review panel
+
+Finding cards use icon buttons and show who reported each finding, the review panel uses switches, and you can choose how review action icons are labelled. Kulula also finds your pull requests after a thread turn and stops polling checkouts and pull requests while it is idle.
+
+## Easier settings
+
+Settings sections, routing controls and review defaults are tidied, you can pick a third level of model effort, and Add Repository opens its folder pickers as sheets.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.21.0/Kulula-0.21.0.dmg" length="11177472" type="application/octet-stream" sparkle:edSignature="2/MvHNRH3AzH3TpclEAd7uUcQEzxKwQ2SSSLnL3YNvCzVxOrEOuZ3t4u7XHdAFCqXpJDZGljdBsOhs6AM2cDDg=="/>
+        </item>
+        <item>
             <title>0.20.0</title>
             <pubDate>Sat, 07 Nov 2026 22:40:50 +0200</pubDate>
             <sparkle:version>21</sparkle:version>
@@ -35,26 +56,9 @@ Choose a recent branch commit to compare against your working files, review its 
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.19.0/Kulula-0.19.0.dmg" length="10896856" type="application/octet-stream" sparkle:edSignature="NvNI76GgGncIR47VF0KaEQ2Q5bw0lgRMRHplzgFfTOulrfuxdo6OJnG2UAJTlxDZiKktNKz/FWZJGuk0hgKEDw=="/>
         </item>
-        <item>
-            <title>0.18.0</title>
-            <pubDate>Sat, 07 Nov 2026 00:52:11 +0200</pubDate>
-            <sparkle:version>19</sparkle:version>
-            <sparkle:shortVersionString>0.18.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Files and code review
-
-Browse local changes in the Files tab with a per-file diff viewer, and review pull requests with clearer checkout and branch controls.
-
-## More reliable conversations
-
-Keep pull request selection aligned with the active conversation, see which engines are available for your setup, and use the standardized Antigravity connection.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.18.0/Kulula-0.18.0.dmg" length="10830621" type="application/octet-stream" sparkle:edSignature="pwiwNdybF6jqcpdjIzI9n9UKf8s4ZaVOYAImXiIlGymDJlYXb5iSI27Rg40mrK3y/pd7VnQ0FE47XzcxKweBCw=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: P1QTU/Gz5hw13tBDsjgYBkNkPFAeQ7x6xplVpXFnW4bVrvzmB+CfdrI9k1m7fZwAjOzbp+QDNaVM0qbZmH7YBg==
-length: 3602
+edSignature: NKbWpno+rJSCDXk/7SlIjS5Vsdj/5jjwDd1kT0NCZEAR9vQPXAK8HRvJ2a+51k/29mJqBVce1gjqvz8kPVIJAw==
+length: 3927
 -->
