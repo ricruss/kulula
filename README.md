@@ -16,6 +16,7 @@ Download the latest `.dmg` from [Releases](https://github.com/ricruss/kulula/rel
 - **Get a second opinion before you ship.** Bring review findings into a worklist, ask another engine to assess them, and work through fixes, tests and re-review.
 - **Put recurring work on a schedule.** Run repository prompts on a timetable, inspect each run, and continue the result in chat.
 - **Work on separate changes in separate worktrees.** Give a conversation its own branch and checkout, with checks that keep actions on the intended branch.
+- **Let agents hand work to each other.** An agent can split a separate change into its own subthread, branch and pull request, and a subthread can send a report back to the thread that started it.
 - **Keep tests and fixes moving.** Queue project tests and use Auto Fix for bounded rounds of fixes, builds and tests.
 - **Choose how much to delegate.** Use approval cards for hands-on control or select a security level for more autonomous work, with decisions visible in the transcript.
 - **Keep unattended commands contained.** macOS sandboxing limits where app-run builds, tests and other unattended commands can write, including in Trust Mode.
@@ -130,6 +131,16 @@ Schedules run locally while Kulula is open and your Mac is awake. Missed occurre
 The Inspector's Branches tab brings local and remote branches together with their worktrees. Search and filter the inventory, see matching pull requests and whether a checkout has local changes, and refresh the view as work progresses.
 
 Start the current conversation in a new worktree to give it an isolated branch and checkout, or start a subthread in a new branch or an existing worktree. Existing threads and their work are left in place. Before deleting a branch or removing a worktree, Kulula previews what will be affected and checks for active threads and uncommitted changes; it will not discard local work as part of cleanup.
+
+## Agents that hand work to each other
+
+When part of a task deserves its own branch and pull request, Claude Code, Codex and Antigravity CLI can ask Kulula to start a **subthread** for it. The agent writes a self-contained brief: the goal, what has been decided, and what the new thread must leave alone. You review the request before anything starts. The subthread then gets its own agent and its own worktree, so the current thread stays focused on its own change and each pull request keeps its own thread through review.
+
+A Codex subthread can also send a **report** back to the thread that started it, such as the URL of the pull request it opened. Nothing is forwarded automatically; the child sends only the message it chooses. The report appears as a green message in both transcripts, and the parent receives it on its next turn once it is idle. Reports are treated as claims, not instructions: the parent is told who sent the text and to check it, for example with `gh pr view`, before relying on it.
+
+If Kulula quits while a parent turn may or may not have received a report, the report is shown as uncertain rather than sent again. You can retry it on a later turn or mark it delivered. A scheduled run cannot receive reports until it has finished and you have chosen **Continue in Chat**; the child is told to try again after that.
+
+A thread on the default branch cannot create a branch in its own checkout. It can instead commit the change locally, hand it to a subthread that builds, tests and opens the pull request, and then offer to put the default branch back where it was. Pushing, opening the pull request and discarding that local commit each still need your approval.
 
 ## Threads that stay on their branch
 
