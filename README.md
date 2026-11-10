@@ -142,6 +142,29 @@ If Kulula quits while a parent turn may or may not have received a report, the r
 
 A thread on the default branch cannot create a branch in its own checkout. It can instead commit the change locally, hand it to a subthread that builds, tests and opens the pull request, and then offer to put the default branch back where it was. Pushing, opening the pull request and discarding that local commit each still need your approval.
 
+## Asking your agent to use Kulula's tools
+
+Each engine is told which Kulula tools it has when a session starts, so you can ask for them in plain language. Nothing needs installing or configuring.
+
+| Tool | What it does |
+|---|---|
+| `spawn_subthread` | Asks you to start a new thread on a new branch in its own worktree, from a brief the agent writes. You can edit the brief or decline. |
+| `run_tests` | Runs the project's tests, or just the ones it names, through the shared test queue and returns the result to the thread. |
+| `run_build` | Runs the project's build through the same queue. |
+| `report_to_parent` | Codex subthreads only: sends a short message to the thread that started them. |
+
+Example prompts:
+
+- *"The logging cleanup is unrelated to this change. Split it into its own subthread and pull request."*
+- *"Start a subthread for the migration script on a branch called `db-migration`, branching from `main`, and have it report the pull request URL back to me when it is open."*
+- *"I'm on `main` and these edits should be a pull request. Commit them and hand them to a subthread."*
+- *"Run only the tests for the files you changed, then run the whole suite if they pass."*
+- *"Build it and tell me whether it compiles before you commit."*
+
+An agent can only create new branches. To keep working on a branch that already has a worktree, do it from the app: choose **Existing Worktree** when you start a thread in a worktree, or use **New thread** on a worktree's row in the Branches tab. The new thread takes over that branch and leaves its files as they are.
+
+Tool calls go through the same approval flow as everything else, and a subthread request is always yours to review.
+
 ## Threads that stay on their branch
 
 A thread is bound to the branch it works on and, when the work came from a review, to its pull request. Before a fix, commit, push, reply or merge, Kulula checks that the branch, the pull request and the checkout agree. If they do not it blocks the action and offers a way back rather than acting on the wrong code. Reading and discussing another pull request stays safe.
