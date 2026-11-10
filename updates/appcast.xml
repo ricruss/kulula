@@ -6,6 +6,27 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.23.0</title>
+            <pubDate>Tue, 10 Nov 2026 22:53:41 +0200</pubDate>
+            <sparkle:version>24</sparkle:version>
+            <sparkle:shortVersionString>0.23.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Independent model choices
+
+The transcript, review, fix and resolve actions each keep their own model selection. Changing one no longer changes the others, and an action's default no longer follows the transcript's pick.
+
+## Reports from subthreads
+
+A subthread can now send an optional report back to the thread that started it, and the parent receives it as clearly attributed input.
+
+## Better guidance for splitting work
+
+Threads working on the default branch now know how to hand work to a subthread so it becomes its own branch and pull request, and how to leave the default branch back in step with the remote afterwards.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.23.0/Kulula-0.23.0.dmg" length="11392906" type="application/octet-stream" sparkle:edSignature="fHAGWwZ5REfWKgtI09MGeKjZiqf5AI3sN7VMieNbn7zrKjzSGbYdSJHS4TppD0ZeCeztREDPsT8zojnsrFIIBQ=="/>
+        </item>
+        <item>
             <title>0.22.0</title>
             <pubDate>Mon, 09 Nov 2026 22:38:45 +0200</pubDate>
             <sparkle:version>23</sparkle:version>
@@ -43,26 +64,9 @@ Settings sections, routing controls and review defaults are tidied, you can pick
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.21.0/Kulula-0.21.0.dmg" length="11177472" type="application/octet-stream" sparkle:edSignature="2/MvHNRH3AzH3TpclEAd7uUcQEzxKwQ2SSSLnL3YNvCzVxOrEOuZ3t4u7XHdAFCqXpJDZGljdBsOhs6AM2cDDg=="/>
         </item>
-        <item>
-            <title>0.20.0</title>
-            <pubDate>Sat, 07 Nov 2026 22:40:50 +0200</pubDate>
-            <sparkle:version>21</sparkle:version>
-            <sparkle:shortVersionString>0.20.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Connect Codex to Xcode
-
-Register Xcode’s development tools from Settings and handle Xcode requests directly in your conversation.
-
-## More capable reviews
-
-Use live web search with Codex by default, and get clearer controls for reviewing pull requests and fixing issues automatically.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.20.0/Kulula-0.20.0.dmg" length="11002931" type="application/octet-stream" sparkle:edSignature="qUByYY3UtkQXXod9Gui9Op3Nc5jWfnEs0cE7EZtqTf3DFv3ze5WtACADmPvPIub4WdmTPsuaSaUCVv5sLInIDQ=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: qXzEZ2YyWe/7qkUlyyuG4iG06jPvt5jfIvp7Rk8U0MX0MVDw6pE3XcqPTJ1jTF9H/Stwyo9C3w1CJf5huDgtDw==
-length: 4135
+edSignature: ImH+qe9bZm/hJajRcJjP2dFSOC39ehOFMXE9r9OmNMqBK6PUL/Ohmnw12paAA7doiVxcmUYKzp5/WJOMuoUOCw==
+length: 4476
 -->
