@@ -6,6 +6,39 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.24.0</title>
+            <pubDate>Fri, 13 Nov 2026 14:19:39 +0200</pubDate>
+            <sparkle:version>25</sparkle:version>
+            <sparkle:shortVersionString>0.24.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Actions tab
+
+A new Actions tab keeps your saved prompts in one place so you can run them again without retyping.
+
+## Plan usage
+
+Usage now shows what you have remaining rather than what you have used. The Status tab also shows your Codex weekly quota with progress bars, and Codex usage refreshes on its own.
+
+## Model defaults in Settings
+
+Settings now has multi-level model and effort selectors, so you can set a default for each action.
+
+## Build and test results reach the agent
+
+When a build or test run finishes in the queue, the result goes back to the agent that asked for it. A finished thread can also start a subthread without being told to.
+
+## Fewer stalls
+
+A held process tree no longer stops the build queue, and Kulula warns you when a merge leaves the worktree in place. Rate and spending limit errors from Codex now show the reason instead of a generic failure.
+
+## Local review
+
+Local review now refreshes the pull request head first, so it reviews the latest commits.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.24.0/Kulula-0.24.0.dmg" length="11596410" type="application/octet-stream" sparkle:edSignature="4Ekv/7nMRwvyrKaPCViVkbpL9VXBTEzBkWr3M6WU2x5AYsIJpswJGtUo+ncJpshRAIb3mMn3lvuvulxctuZIBg=="/>
+        </item>
+        <item>
             <title>0.23.0</title>
             <pubDate>Tue, 10 Nov 2026 22:53:41 +0200</pubDate>
             <sparkle:version>24</sparkle:version>
@@ -43,30 +76,9 @@ Review actions now check the branch state before proceeding, and the review pane
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.22.0/Kulula-0.22.0.dmg" length="11316990" type="application/octet-stream" sparkle:edSignature="WHx5Lz9V+Tb0duc/08ucHYhlSkOSZ6HMcua1CCkHi2kKHNqn319HYfYejpA0boKIF1LvBidk0CCN1euLQOb6Bw=="/>
         </item>
-        <item>
-            <title>0.21.0</title>
-            <pubDate>Mon, 09 Nov 2026 01:05:24 +0200</pubDate>
-            <sparkle:version>22</sparkle:version>
-            <sparkle:shortVersionString>0.21.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Continue a thread in an existing worktree
-
-Pick up a thread in a worktree you already have instead of creating a new one, and cleaning up a finished worktree no longer freezes the window.
-
-## Clearer review panel
-
-Finding cards use icon buttons and show who reported each finding, the review panel uses switches, and you can choose how review action icons are labelled. Kulula also finds your pull requests after a thread turn and stops polling checkouts and pull requests while it is idle.
-
-## Easier settings
-
-Settings sections, routing controls and review defaults are tidied, you can pick a third level of model effort, and Add Repository opens its folder pickers as sheets.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.21.0/Kulula-0.21.0.dmg" length="11177472" type="application/octet-stream" sparkle:edSignature="2/MvHNRH3AzH3TpclEAd7uUcQEzxKwQ2SSSLnL3YNvCzVxOrEOuZ3t4u7XHdAFCqXpJDZGljdBsOhs6AM2cDDg=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: ImH+qe9bZm/hJajRcJjP2dFSOC39ehOFMXE9r9OmNMqBK6PUL/Ohmnw12paAA7doiVxcmUYKzp5/WJOMuoUOCw==
-length: 4476
+edSignature: Wc+WUg/9COyAOgWvwdX0ksLNMUpeO+FW+Drlz7CFjLajeKkJRybHXPTTHGXHkVwUylkCIrkCDjxpa3Ro0CmKDw==
+length: 4785
 -->
