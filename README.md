@@ -17,7 +17,8 @@ Download the latest `.dmg` from [Releases](https://github.com/ricruss/kulula/rel
 - **Put recurring work on a schedule.** Run repository prompts on a timetable, inspect each run, and continue the result in chat.
 - **Work on separate changes in separate worktrees.** Give a conversation its own branch and checkout, with checks that keep actions on the intended branch.
 - **Let agents hand work to each other.** An agent can split a separate change into its own subthread, branch and pull request, and a subthread can send a report back to the thread that started it.
-- **Keep tests and fixes moving.** Queue project tests and use Auto Fix for bounded rounds of fixes, builds and tests.
+- **Keep tests and fixes moving.** Queue project tests and builds, get the result back in the thread, and use Auto Fix for bounded rounds of fixes, builds and tests.
+- **Save the prompts you reuse.** Keep them in the Actions tab and run them again without retyping.
 - **Choose how much to delegate.** Use approval cards for hands-on control or select a security level for more autonomous work, with decisions visible in the transcript.
 - **Keep unattended commands contained.** macOS sandboxing limits where app-run builds, tests and other unattended commands can write, including in Trust Mode.
 
@@ -92,7 +93,7 @@ The same loop left to run, with a cap on rounds and on minutes that both count d
 
 The Inspector's Tests tab brings project test runs together. Kulula discovers individual tests where the project supports it, so you can run a single test or the full suite and see which tests passed, failed, have not run yet, or need rerunning after a change.
 
-Runs started from the Tests tab, requested by an engine, or started by Auto Fix share a queue. You can choose how many runs happen at once; others wait their turn, and the checkout stays protected while a test process is still using it. Engines can request tests by their listed identifiers and get the result back in the thread. Test commands remain subject to the usual approval and workspace protections.
+Runs started from the Tests tab, requested by an engine, or started by Auto Fix share a queue. You can choose how many runs happen at once; others wait their turn, and the checkout stays protected while a test process is still using it. Engines can request tests by their listed identifiers, and builds through the same queue, and the result goes back to the agent that asked. A held process tree no longer stalls the queue. Test commands remain subject to the usual approval and workspace protections.
 
 ## Work with Xcode
 
@@ -116,6 +117,14 @@ Connect Claude Code, Codex, Antigravity CLI or Grok CLI to Xcode's Model Context
 
 These commands update the CLI's user-level MCP configuration; Kulula checks the registration but does not configure it automatically. When the agent calls an Xcode tool, approve the CLI request using Kulula's usual approval card. Xcode may also ask you to authorize the agent and the project path. If the first simulator boot or launch fails, start that simulator once from Xcode and retry.
 
+## Actions
+
+The Actions tab keeps your saved prompts in one place. Save a prompt you use often, such as a review checklist or a release summary, and run it in a thread without retyping it.
+
+## Model defaults
+
+Settings has multi-level model and effort selectors, so you can set a default model and effort for each kind of action. The transcript, review, fix and resolve actions each keep their own choice, and changing one does not change the others.
+
 ## Scheduled tasks
 
 Turn a prompt into a recurring task for a repository: a morning summary of recent changes, a weekly review of test coverage, or a regular check for documentation that needs updating.
@@ -136,7 +145,7 @@ Start the current conversation in a new worktree to give it an isolated branch a
 
 When part of a task deserves its own branch and pull request, Claude Code, Codex and Antigravity CLI can ask Kulula to start a **subthread** for it. The agent writes a self-contained brief: the goal, what has been decided, and what the new thread must leave alone. You review the request before anything starts. The subthread then gets its own agent and its own worktree, so the current thread stays focused on its own change and each pull request keeps its own thread through review.
 
-A Codex subthread can also send a **report** back to the thread that started it, such as the URL of the pull request it opened. Nothing is forwarded automatically; the child sends only the message it chooses. The report appears as a green message in both transcripts, and the parent receives it on its next turn once it is idle. Reports are treated as claims, not instructions: the parent is told who sent the text and to check it, for example with `gh pr view`, before relying on it.
+A subthread on any engine can also send a **report** back to the thread that started it, such as the URL of the pull request it opened. Nothing is forwarded automatically; the child sends only the message it chooses. The report appears as a green message in both transcripts, and the parent receives it on its next turn once it is idle. Reports are treated as claims, not instructions: the parent is told who sent the text and to check it, for example with `gh pr view`, before relying on it.
 
 If Kulula quits while a parent turn may or may not have received a report, the report is shown as uncertain rather than sent again. You can retry it on a later turn or mark it delivered. A scheduled run cannot receive reports until it has finished and you have chosen **Continue in Chat**; the child is told to try again after that.
 
@@ -151,7 +160,7 @@ Each engine is told which Kulula tools it has when a session starts, so you can 
 | `spawn_subthread` | Asks you to start a new thread on a new branch in its own worktree, from a brief the agent writes. You can edit the brief or decline. |
 | `run_tests` | Runs the project's tests, or just the ones it names, through the shared test queue and returns the result to the thread. |
 | `run_build` | Runs the project's build through the same queue. |
-| `report_to_parent` | Codex subthreads only: sends a short message to the thread that started them. |
+| `report_to_parent` | Subthreads only, on any engine: sends a short message to the thread that started them. |
 
 Example prompts:
 
@@ -179,7 +188,7 @@ Conversation history and approval grants are stored locally. Reopen Kulula to pi
 
 ## Engine status
 
-The Status tab lists each engine, whether it is available, the plan usage it reports, and a warning when an installed tool has drifted from the version the build was tested against.
+The Status tab lists each engine, whether it is available, the plan usage it reports, and a warning when an installed tool has drifted from the version the build was tested against. Usage shows what you have remaining, with progress bars. Codex shows its weekly quota and refreshes on its own. Engines that report no plan quota show the tokens used by the last turn.
 
 ## Requirements
 
