@@ -120,6 +120,8 @@ These commands update the CLI's user-level MCP configuration; Kulula checks the 
 
 ## Kanban board
 
+<img src="artwork/kulula-kanban.webp" alt="Kulula" width="100%" align="center">
+
 The Inspector's Board tab shows a workspace's tasks as cards in columns. Choose **Turn On Board** to create the default columns, then add, edit, reorder and move cards by drag or from a menu (also available as VoiceOver actions). A card has a title and description, notes, subtasks and a history of recent changes. Filter cards, sort each column, and hide columns you do not need; hidden columns keep their cards and stay valid places to move a card, and an eye menu brings them back.
 
 **Cards move with the work.** A thread started for a card moves it to In Progress, then In Review when its pull request opens, then Done when the pull request merges. Cards show a git status icon and the pull request number. Renaming or reordering a column does not change where those moves go.
