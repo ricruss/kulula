@@ -18,6 +18,7 @@ Download the latest `.dmg` from [Releases](https://github.com/ricruss/kulula/rel
 - **Work on separate changes in separate worktrees.** Give a conversation its own branch and checkout, with checks that keep actions on the intended branch.
 - **Let agents hand work to each other.** An agent can split a separate change into its own subthread, branch and pull request, and a subthread can send a report back to the thread that started it.
 - **Keep tests and fixes moving.** Queue project tests and builds, get the result back in the thread, and use Auto Fix for bounded rounds of fixes, builds and tests.
+- **Plan work on a Kanban board.** Keep a workspace's tasks as cards in columns that move on their own as threads start, open pull requests and merge, and let columns run prompts when a card arrives.
 - **Save the prompts you reuse.** Keep them in the Actions tab and run them again without retyping.
 - **Choose how much to delegate.** Use approval cards for hands-on control or select a security level for more autonomous work, with decisions visible in the transcript.
 - **Keep unattended commands contained.** macOS sandboxing limits where app-run builds, tests and other unattended commands can write, including in Trust Mode.
@@ -117,6 +118,18 @@ Connect Claude Code, Codex, Antigravity CLI or Grok CLI to Xcode's Model Context
 
 These commands update the CLI's user-level MCP configuration; Kulula checks the registration but does not configure it automatically. When the agent calls an Xcode tool, approve the CLI request using Kulula's usual approval card. Xcode may also ask you to authorize the agent and the project path. If the first simulator boot or launch fails, start that simulator once from Xcode and retry.
 
+## Kanban board
+
+The Inspector's Board tab shows a workspace's tasks as cards in columns. Choose **Turn On Board** to create the default columns, then add, edit, reorder and move cards by drag or from a menu (also available as VoiceOver actions). A card has a title and description, notes, subtasks and a history of recent changes. Filter cards, sort each column, and hide columns you do not need; hidden columns keep their cards and stay valid places to move a card, and an eye menu brings them back.
+
+**Cards move with the work.** A thread started for a card moves it to In Progress, then In Review when its pull request opens, then Done when the pull request merges. Cards show a git status icon and the pull request number. Renaming or reordering a column does not change where those moves go.
+
+**Columns can run prompts.** Give a column a prompt and an agent, and each card that arrives there, whether you dragged it or Kulula moved it, starts a new thread with that prompt and the card as context. A column or a task can also have its own model, and a task can work in its own worktree. Prompts run through the usual approval cards at your current security level.
+
+**Import tasks you already track.** Choose a tracker file or a whole folder and an agent proposes cards from it. Nothing is added until you review the batch and approve it, and you can deselect cards first. Your files are never edited, and importing again skips cards you already hold, even ones you have moved or edited.
+
+**Agents can use the board.** An agent can read it, create, edit and move cards, and add notes and subtasks. It cannot delete a card: it can only ask, and nothing is deleted until you click Delete on that card, at every security level, Trust Mode included.
+
 ## Actions
 
 The Actions tab keeps your saved prompts in one place. Save a prompt you use often, such as a review checklist or a release summary, and run it in a thread without retyping it.
@@ -160,6 +173,8 @@ Each engine is told which Kulula tools it has when a session starts, so you can 
 | `spawn_subthread` | Asks you to start a new thread on a new branch in its own worktree, from a brief the agent writes. You can edit the brief or decline. |
 | `run_tests` | Runs the project's tests, or just the ones it names, through the shared test queue and returns the result to the thread. |
 | `run_build` | Runs the project's build through the same queue. |
+| `start_worktree` | On a thread with no branch yet, asks to move that same thread onto a new branch in its own worktree, without starting a child thread. You can decline. |
+| `board` | Reads the board and creates, edits and moves cards, adds notes and subtasks, and asks you to delete a card. Available once the board is on. |
 | `report_to_parent` | Subthreads only, on any engine: sends a short message to the thread that started them. |
 
 Example prompts:
