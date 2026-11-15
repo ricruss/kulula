@@ -6,6 +6,39 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.25.0</title>
+            <pubDate>Mon, 16 Nov 2026 00:42:38 +0200</pubDate>
+            <sparkle:version>26</sparkle:version>
+            <sparkle:shortVersionString>0.25.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Kanban task board
+
+A new Board tab shows your workspace's tasks as cards in columns. Turn it on from the tab, then add, edit, reorder and move cards by drag or from a menu. Cards can carry notes and subtasks, and the tab has a card filter, per-column sorting, and show/hide for columns.
+
+- Moving a card follows the work. A thread started for a card moves it to In Progress, then In Review when its pull request opens, then Done when it merges. Cards show a git status icon and the pull request number.
+- A column can run a prompt on an agent whenever a card arrives, and you can give a column or a task its own model.
+- Agents can read the board, edit and move cards, and ask you to delete one. Nothing is deleted until you click Delete on that card.
+- Import tasks from a tracker file or a folder of them. The agent proposes cards and nothing is added until you approve the batch.
+
+## Threads can move to their own branch
+
+An agent working on the default branch can now move its thread onto a new branch in its own worktree, without starting a separate subthread.
+
+## Fixes and review
+
+- A subthread request you have accepted keeps going when the agent's turn ends. Antigravity ends its turn while a spawn is still running, which used to cancel it and leave a stray branch behind. Antigravity also gets Kulula's tools directly in its tool list.
+- Auto Commit/Push after a Fix now tells you in the thread why it did not run.
+- Findings no longer get stuck on "fixing" after a fix turn is refused or interrupted, so Fix and Auto Fix can retry them.
+- A review panel refresh no longer erases the "fixed" status an Auto Fix run just recorded.
+
+## Look and feel
+
+Engines now show vector logos instead of text glyphs, and errors and warnings in the review panel tabs share one alert style.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.25.0/Kulula-0.25.0.dmg" length="12461039" type="application/octet-stream" sparkle:edSignature="Y/u/eGbNeEES+r/2Eeqqi2OjgygcAgfLSHD+FhaohlDZw0hCp8TVDuR7yhwdd2jNvgrpR0RSf5qS2aJbhS4XCg=="/>
+        </item>
+        <item>
             <title>0.24.0</title>
             <pubDate>Fri, 13 Nov 2026 14:19:39 +0200</pubDate>
             <sparkle:version>25</sparkle:version>
@@ -59,26 +92,9 @@ Threads working on the default branch now know how to hand work to a subthread s
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.23.0/Kulula-0.23.0.dmg" length="11392906" type="application/octet-stream" sparkle:edSignature="fHAGWwZ5REfWKgtI09MGeKjZiqf5AI3sN7VMieNbn7zrKjzSGbYdSJHS4TppD0ZeCeztREDPsT8zojnsrFIIBQ=="/>
         </item>
-        <item>
-            <title>0.22.0</title>
-            <pubDate>Mon, 09 Nov 2026 22:38:45 +0200</pubDate>
-            <sparkle:version>23</sparkle:version>
-            <sparkle:shortVersionString>0.22.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## More flexible worktrees
-
-Continue a conversation in an existing worktree and choose its model, or let separate Auto Fix jobs work on different changes at the same time. Detached worktrees remain readable, with clear notices when an action cannot safely write there.
-
-## Clearer pull request reviews
-
-Review actions now check the branch state before proceeding, and the review panel keeps its checkout information consistent while work is running.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.22.0/Kulula-0.22.0.dmg" length="11316990" type="application/octet-stream" sparkle:edSignature="WHx5Lz9V+Tb0duc/08ucHYhlSkOSZ6HMcua1CCkHi2kKHNqn319HYfYejpA0boKIF1LvBidk0CCN1euLQOb6Bw=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: Wc+WUg/9COyAOgWvwdX0ksLNMUpeO+FW+Drlz7CFjLajeKkJRybHXPTTHGXHkVwUylkCIrkCDjxpa3Ro0CmKDw==
-length: 4785
+edSignature: acNKf3TKDnuH1UsCIblRMMJW9HQDHHRQyaT87lpM3w/CFP+wDhvZ7DmFTjdXACGzZ8iy0PAV+nlnLyX69yTjAw==
+length: 6124
 -->
