@@ -126,6 +126,8 @@ The Inspector's Board tab shows a workspace's tasks as cards in columns. Choose 
 
 **Cards move with the work.** A thread started for a card moves it to In Progress, then In Review when its pull request opens, then Done when the pull request merges. Cards show a git status icon and the pull request number. Renaming or reordering a column does not change where those moves go.
 
+**Releases and tags.** Group cards into release versions, assign a card to one from its detail view, and filter the board by one or several releases or by cards with none. Released versions are grouped apart in the menus and can be hidden. Tags can be defined, assigned to cards, filtered on and colored, and the board remembers your filters for each workspace. A thread started in a worktree gets its card automatically.
+
 **Columns can run prompts.** Give a column a prompt and an agent, and each card that arrives there, whether you dragged it or Kulula moved it, starts a new thread with that prompt and the card as context. A column or a task can also have its own model, and a task can work in its own worktree. Prompts run through the usual approval cards at your current security level.
 
 **Import tasks you already track.** Choose a tracker file or a whole folder and an agent proposes cards from it. Nothing is added until you review the batch and approve it, and you can deselect cards first. Your files are never edited, and importing again skips cards you already hold, even ones you have moved or edited.
