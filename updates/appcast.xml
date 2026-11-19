@@ -6,6 +6,32 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.26.0</title>
+            <pubDate>Thu, 19 Nov 2026 12:21:53 +1000</pubDate>
+            <sparkle:version>27</sparkle:version>
+            <sparkle:shortVersionString>0.26.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Board releases and tags
+
+Cards can now belong to a release version. Create versions, assign a card to one from its detail view, and filter the board by one or several releases, including cards with no release. Released versions are grouped apart in the menus and can be hidden. Tags can be defined, assigned to cards, filtered on and colored. The board remembers your filters for each workspace.
+
+- Threads started for a worktree get a board card automatically.
+- A card's model shows as an icon on the card, and the thread's board column shows as a live pill instead of in its title.
+- Clicking a card selects its linked thread and shows the transcript. The board has new Open Issues and Fixing columns.
+- Every column's prompt now starts a thread bound to its card.
+
+## Fixes
+
+- Reading the board, or using the search and skill tools, no longer makes a planning thread move its card to In Progress.
+- Subthread instructions that an agent writes now show in green like the ones you write.
+- The Review panel shows Auto Fix status and Stop only for the thread that owns the run, so another thread's fix no longer looks like it is blocking yours.
+- Queued builds and tests now run in the order the agent asked for them, and finished test runs no longer freeze the app while they are processed.
+- The panel keeps its width after you close and reopen it.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.26.0/Kulula-0.26.0.dmg" length="12792326" type="application/octet-stream" sparkle:edSignature="DNxLIdrbSolO/n/3ygSLUu2opwA2P1jbS2iclYQQloF3lWkPSKsto6PHO5BYZujNLouUN6Sf7SRTmRIH5tD/CA=="/>
+        </item>
+        <item>
             <title>0.25.0</title>
             <pubDate>Mon, 16 Nov 2026 00:42:38 +0200</pubDate>
             <sparkle:version>26</sparkle:version>
@@ -71,30 +97,9 @@ Local review now refreshes the pull request head first, so it reviews the latest
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.24.0/Kulula-0.24.0.dmg" length="11596410" type="application/octet-stream" sparkle:edSignature="4Ekv/7nMRwvyrKaPCViVkbpL9VXBTEzBkWr3M6WU2x5AYsIJpswJGtUo+ncJpshRAIb3mMn3lvuvulxctuZIBg=="/>
         </item>
-        <item>
-            <title>0.23.0</title>
-            <pubDate>Tue, 10 Nov 2026 22:53:41 +0200</pubDate>
-            <sparkle:version>24</sparkle:version>
-            <sparkle:shortVersionString>0.23.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Independent model choices
-
-The transcript, review, fix and resolve actions each keep their own model selection. Changing one no longer changes the others, and an action's default no longer follows the transcript's pick.
-
-## Reports from subthreads
-
-A subthread can now send an optional report back to the thread that started it, and the parent receives it as clearly attributed input.
-
-## Better guidance for splitting work
-
-Threads working on the default branch now know how to hand work to a subthread so it becomes its own branch and pull request, and how to leave the default branch back in step with the remote afterwards.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.23.0/Kulula-0.23.0.dmg" length="11392906" type="application/octet-stream" sparkle:edSignature="fHAGWwZ5REfWKgtI09MGeKjZiqf5AI3sN7VMieNbn7zrKjzSGbYdSJHS4TppD0ZeCeztREDPsT8zojnsrFIIBQ=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: acNKf3TKDnuH1UsCIblRMMJW9HQDHHRQyaT87lpM3w/CFP+wDhvZ7DmFTjdXACGzZ8iy0PAV+nlnLyX69yTjAw==
-length: 6124
+edSignature: 8P5fX5NFCIsUX7NdS9KLKbOoxtPZ7dpkFCAi7DOJjseslMCzZ7H2rVteVboCoW3qOTof4qBNDun4PKra/98WCg==
+length: 6848
 -->
