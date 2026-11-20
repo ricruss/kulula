@@ -6,6 +6,34 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.27.0</title>
+            <pubDate>Sat, 21 Nov 2026 09:36:38 +1000</pubDate>
+            <sparkle:version>28</sparkle:version>
+            <sparkle:shortVersionString>0.27.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Project settings, card prerequisites and Auto Resolve
+
+- Each project now has its own settings for a working branch, whether to pull it after a merge, protected branches and delete protection. An agent can propose settings it finds in your project, and you approve them on a card.
+- Cards can have prerequisites. A card will not start work until the cards it depends on are finished.
+- Auto Resolve marks findings as resolved once a fix has been pushed. It needs Auto Push to be on.
+- Board cards are created automatically for subthread work, and are locked while a linked thread is running so they cannot be edited or moved underneath it.
+- Marking a release as released moves its cards to Done, and released cards count as finished in prerequisites and release note drafts.
+- A project instruction review can be run on demand.
+- The model's reasoning shows as an expanded card in the transcript, like a tool call.
+- Starting a new thread switches the view back to the transcript.
+- Fenced code blocks in the transcript wrap instead of scrolling sideways.
+
+## Fixes
+
+- Fix no longer refuses with a fork mismatch after you rebase a pull request.
+- Cards created in a column now run that column's prompt.
+- Fix rounds follow your project's own rules for where findings and backlog items are filed.
+- Each answer now appears under its own question.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.27.0/Kulula-0.27.0.dmg" length="13162191" type="application/octet-stream" sparkle:edSignature="bEjIjx0LvuA1miOczGU1l4HzyTBxuW4y17yKnmNrv3xn/Irs7E3jib0W2NnCR8qkOS5CyPCQJpKZ4NcKzZ3WDQ=="/>
+        </item>
+        <item>
             <title>0.26.0</title>
             <pubDate>Thu, 19 Nov 2026 12:21:53 +1000</pubDate>
             <sparkle:version>27</sparkle:version>
@@ -64,42 +92,9 @@ Engines now show vector logos instead of text glyphs, and errors and warnings in
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.25.0/Kulula-0.25.0.dmg" length="12461039" type="application/octet-stream" sparkle:edSignature="Y/u/eGbNeEES+r/2Eeqqi2OjgygcAgfLSHD+FhaohlDZw0hCp8TVDuR7yhwdd2jNvgrpR0RSf5qS2aJbhS4XCg=="/>
         </item>
-        <item>
-            <title>0.24.0</title>
-            <pubDate>Fri, 13 Nov 2026 14:19:39 +0200</pubDate>
-            <sparkle:version>25</sparkle:version>
-            <sparkle:shortVersionString>0.24.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Actions tab
-
-A new Actions tab keeps your saved prompts in one place so you can run them again without retyping.
-
-## Plan usage
-
-Usage now shows what you have remaining rather than what you have used. The Status tab also shows your Codex weekly quota with progress bars, and Codex usage refreshes on its own.
-
-## Model defaults in Settings
-
-Settings now has multi-level model and effort selectors, so you can set a default for each action.
-
-## Build and test results reach the agent
-
-When a build or test run finishes in the queue, the result goes back to the agent that asked for it. A finished thread can also start a subthread without being told to.
-
-## Fewer stalls
-
-A held process tree no longer stops the build queue, and Kulula warns you when a merge leaves the worktree in place. Rate and spending limit errors from Codex now show the reason instead of a generic failure.
-
-## Local review
-
-Local review now refreshes the pull request head first, so it reviews the latest commits.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.24.0/Kulula-0.24.0.dmg" length="11596410" type="application/octet-stream" sparkle:edSignature="4Ekv/7nMRwvyrKaPCViVkbpL9VXBTEzBkWr3M6WU2x5AYsIJpswJGtUo+ncJpshRAIb3mMn3lvuvulxctuZIBg=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: 8P5fX5NFCIsUX7NdS9KLKbOoxtPZ7dpkFCAi7DOJjseslMCzZ7H2rVteVboCoW3qOTof4qBNDun4PKra/98WCg==
-length: 6848
+edSignature: K5iyQvF5iMKPTYPQd+QxwPROsaVLpe3wKD1HDE4SHY0apoODHSB4rH5R0bSAHJdbTKUPUqNlAlMv6LzCGIC/Cw==
+length: 7207
 -->
