@@ -88,7 +88,7 @@ Open, Fixed, Dismissed and All filters each carry a count, and merged pull reque
 
 ## Auto Fix
 
-The same loop left to run, with a cap on rounds and on minutes that both count down on screen. A round is fix, build, test, and optionally a fresh review. It stops on either cap, on a round that changed nothing, or on a build that fails. It works within the permissions you have already given and never grants itself anything, so on a machine with no grants it is exactly as interactive as clicking Fix yourself.
+The same loop left to run, with a cap on rounds and on minutes that both count down on screen. A round is fix, build, test, and optionally a fresh review. It stops on either cap, on a round that changed nothing, or on a build that fails. It works within the permissions you have already given and never grants itself anything, so on a machine with no grants it is exactly as interactive as clicking Fix yourself. With Auto Push on, **Auto Resolve** also marks findings resolved once the fix has been pushed; it is unavailable until Auto Push is on.
 
 ## Test queue
 
@@ -124,9 +124,11 @@ These commands update the CLI's user-level MCP configuration; Kulula checks the 
 
 The Inspector's Board tab shows a workspace's tasks as cards in columns. Choose **Turn On Board** to create the default columns, then add, edit, reorder and move cards by drag or from a menu (also available as VoiceOver actions). A card has a title and description, notes, subtasks and a history of recent changes. Filter cards, sort each column, and hide columns you do not need; hidden columns keep their cards and stay valid places to move a card, and an eye menu brings them back.
 
-**Cards move with the work.** A thread started for a card moves it to In Progress, then In Review when its pull request opens, then Done when the pull request merges. Cards show a git status icon and the pull request number. Renaming or reordering a column does not change where those moves go.
+**Cards move with the work.** A thread started for a card moves it to In Progress, then In Review when its pull request opens, then Done when the pull request merges. Cards show a git status icon and the pull request number, and work an agent starts in a subthread gets a card too. A card is locked while a thread linked to it is running, so it cannot be edited or moved underneath that thread. Renaming or reordering a column does not change where those moves go.
 
-**Releases and tags.** Group cards into release versions, assign a card to one from its detail view, and filter the board by one or several releases or by cards with none. Released versions are grouped apart in the menus and can be hidden. Tags can be defined, assigned to cards, filtered on and colored, and the board remembers your filters for each workspace. A thread started in a worktree gets its card automatically.
+**Prerequisites.** A card can depend on other cards, and work on it does not start until they are finished.
+
+**Releases and tags.** Group cards into release versions, assign a card to one from its detail view, and filter the board by one or several releases or by cards with none. Released versions are grouped apart in the menus and can be hidden. Marking a release as released moves its cards to Done, and released cards count as finished for prerequisites and release note drafts. Tags can be defined, assigned to cards, filtered on and colored, and the board remembers your filters for each workspace. A thread started in a worktree gets its card automatically.
 
 **Columns can run prompts.** Give a column a prompt and an agent, and each card that arrives there, whether you dragged it or Kulula moved it, starts a new thread with that prompt and the card as context. A column or a task can also have its own model, and a task can work in its own worktree. Prompts run through the usual approval cards at your current security level.
 
@@ -157,6 +159,10 @@ Schedules run locally while Kulula is open and your Mac is awake. Missed occurre
 The Inspector's Branches tab brings local and remote branches together with their worktrees. Search and filter the inventory, see matching pull requests and whether a checkout has local changes, and refresh the view as work progresses.
 
 Start the current conversation in a new worktree to give it an isolated branch and checkout, or start a subthread in a new branch or an existing worktree. Existing threads and their work are left in place. Before deleting a branch or removing a worktree, Kulula previews what will be affected and checks for active threads and uncommitted changes; it will not discard local work as part of cleanup.
+
+## Project settings
+
+Each project has its own settings for the branch work happens on, whether Kulula pulls it after a merge, which branches are protected, and whether branch deletion is blocked altogether. An agent can propose settings it finds in your project, such as build and test commands, and nothing changes until you approve the proposal on a card.
 
 ## Agents that hand work to each other
 
