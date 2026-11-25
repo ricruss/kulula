@@ -17,6 +17,8 @@ Download the latest `.dmg` from [Releases](https://github.com/ricruss/kulula/rel
 - **Put recurring work on a schedule.** Run repository prompts on a timetable, inspect each run, and continue the result in chat.
 - **Work on separate changes in separate worktrees.** Give a conversation its own branch and checkout, with checks that keep actions on the intended branch.
 - **Let agents hand work to each other.** An agent can split a separate change into its own subthread, branch and pull request, and a subthread can send a report back to the thread that started it.
+- **Run a whole piece of work from one orchestrator thread.** Start an orchestrator run, let it split the work into child threads, watch their pull requests and checks, and merge them in order with your approval.
+- **Plan before anything changes.** Ask the engine to draft a plan first, review it, and turn it into board cards.
 - **Keep tests and fixes moving.** Queue project tests and builds, get the result back in the thread, and use Auto Fix for bounded rounds of fixes, builds and tests.
 - **Plan work on a Kanban board.** Keep a workspace's tasks as cards in columns that move on their own as threads start, open pull requests and merge, and let columns run prompts when a card arrives.
 - **Save the prompts you reuse.** Keep them in the Actions tab and run them again without retyping.
@@ -86,6 +88,8 @@ Shipping is one card: a commit message drafted on device, the push, and a reply 
 
 Open, Fixed, Dismissed and All filters each carry a count, and merged pull requests stay hidden until you ask for them.
 
+Merging is a confirmation, not a click-through. The dialog says how many open issues the pull request has, names a worktree that will be deleted, and flags fixes still in progress, failing or unfinished checks, drafts, requested changes and a branch that is behind its base. After a merge, pull requests stacked on the merged branch are retargeted, and the merged branch is kept until they have moved.
+
 ## Auto Fix
 
 The same loop left to run, with a cap on rounds and on minutes that both count down on screen. A round is fix, build, test, and optionally a fresh review. It stops on either cap, on a round that changed nothing, or on a build that fails. It works within the permissions you have already given and never grants itself anything, so on a machine with no grants it is exactly as interactive as clicking Fix yourself. With Auto Push on, **Auto Resolve** also marks findings resolved once the fix has been pushed; it is unavailable until Auto Push is on.
@@ -94,7 +98,7 @@ The same loop left to run, with a cap on rounds and on minutes that both count d
 
 The Inspector's Tests tab brings project test runs together. Kulula discovers individual tests where the project supports it, so you can run a single test or the full suite and see which tests passed, failed, have not run yet, or need rerunning after a change.
 
-Runs started from the Tests tab, requested by an engine, or started by Auto Fix share a queue. You can choose how many runs happen at once; others wait their turn, and the checkout stays protected while a test process is still using it. Engines can request tests by their listed identifiers, and builds through the same queue, and the result goes back to the agent that asked. A held process tree no longer stalls the queue. Test commands remain subject to the usual approval and workspace protections.
+Runs started from the Tests tab, requested by an engine, or started by Auto Fix share a queue. You can choose how many runs happen at once; others wait their turn, and the checkout stays protected while a test process is still using it. Engines can request tests by their listed identifiers, and builds through the same queue, and the result goes back to the agent that asked. A passing build reports its warnings to the agent and shows their count on the run's card. A held process tree no longer stalls the queue. Test commands remain subject to the usual approval and workspace protections.
 
 ## Work with Xcode
 
@@ -122,7 +126,7 @@ These commands update the CLI's user-level MCP configuration; Kulula checks the 
 
 <img src="artwork/kulula-kanban.webp" alt="Kulula" width="100%" align="center">
 
-The Inspector's Board tab shows a workspace's tasks as cards in columns. Choose **Turn On Board** to create the default columns, then add, edit, reorder and move cards by drag or from a menu (also available as VoiceOver actions). A card has a title and description, notes, subtasks and a history of recent changes. Filter cards, sort each column, and hide columns you do not need; hidden columns keep their cards and stay valid places to move a card, and an eye menu brings them back.
+The sidebar's Board tab opens a workspace's board without selecting a thread, and the Chat, Board and Orchestrator switcher above the conversation is always visible. The board shows a workspace's tasks as cards in columns. Choose **Turn On Board** to create the default columns, then add, edit, reorder and move cards by drag or from a menu (also available as VoiceOver actions). A card has a title and description, notes, subtasks and a history of recent changes. Filter cards, sort each column, and hide columns you do not need; hidden columns keep their cards and stay valid places to move a card, and an eye menu brings them back.
 
 **Cards move with the work.** A thread started for a card moves it to In Progress, then In Review when its pull request opens, then Done when the pull request merges. Cards show a git status icon and the pull request number, and work an agent starts in a subthread gets a card too. A card is locked while a thread linked to it is running, so it cannot be edited or moved underneath that thread. Renaming or reordering a column does not change where those moves go.
 
@@ -134,7 +138,7 @@ The Inspector's Board tab shows a workspace's tasks as cards in columns. Choose 
 
 **Import tasks you already track.** Choose a tracker file or a whole folder and an agent proposes cards from it. Nothing is added until you review the batch and approve it, and you can deselect cards first. Your files are never edited, and importing again skips cards you already hold, even ones you have moved or edited.
 
-**Agents can use the board.** An agent can read it, create, edit and move cards, and add notes and subtasks. It cannot delete a card: it can only ask, and nothing is deleted until you click Delete on that card, at every security level, Trust Mode included.
+**Agents can use the board.** An agent can read it, create, edit and move cards, set any field you can set (prerequisites, tags, release and model included), and add notes and subtasks. It cannot delete a card: it can only ask, and nothing is deleted until you click Delete on that card, at every security level, Trust Mode included.
 
 ## Actions
 
@@ -150,6 +154,8 @@ Turn a prompt into a recurring task for a repository: a morning summary of recen
 
 Open Schedules in the sidebar and add a schedule under a workspace. Set the prompt, choose an engine and model or leave routing on Auto, then choose a time zone and recurrence: every few minutes, daily, weekly, monthly, annually, or a custom five-field cron expression. The editor previews the upcoming occurrence.
 
+A schedule can also be a heartbeat for an orchestrator run: it wakes the orchestrator only when a child's state, pull request or checks changed, and stops when the run ends.
+
 Use **Run Now** to try a schedule immediately, or disable it to pause future runs. Each run has a status and a linked conversation in its schedule's history. Open a completed run and choose **Continue in Chat** to follow up on its findings.
 
 Schedules run locally while Kulula is open and your Mac is awake. Missed occurrences are not replayed, and an occurrence is skipped if that schedule is still running. Scheduled turns use the app's current security mode and normal approval flow; the security control in the editor changes the app-wide mode, not just that schedule. A run can wait for your approval or an answer to a question.
@@ -158,7 +164,7 @@ Schedules run locally while Kulula is open and your Mac is awake. Missed occurre
 
 The Inspector's Branches tab brings local and remote branches together with their worktrees. Search and filter the inventory, see matching pull requests and whether a checkout has local changes, and refresh the view as work progresses.
 
-Start the current conversation in a new worktree to give it an isolated branch and checkout, or start a subthread in a new branch or an existing worktree. Existing threads and their work are left in place. Before deleting a branch or removing a worktree, Kulula previews what will be affected and checks for active threads and uncommitted changes; it will not discard local work as part of cleanup.
+Start the current conversation in a new worktree to give it an isolated branch and checkout, or start a subthread in a new branch or an existing worktree. Existing threads and their work are left in place. Before deleting a branch or removing a worktree, Kulula previews what will be affected and checks for active threads and uncommitted changes; it will not discard local work as part of cleanup. Deleting the last thread attached to a worktree offers to delete the worktree too.
 
 ## Project settings
 
@@ -174,6 +180,16 @@ If Kulula quits while a parent turn may or may not have received a report, the r
 
 A thread on the default branch cannot create a branch in its own checkout. It can instead commit the change locally, hand it to a subthread that builds, tests and opens the pull request, and then offer to put the default branch back where it was. Pushing, opening the pull request and discarding that local commit each still need your approval.
 
+## Orchestrator runs
+
+Start a run from the Orchestrator tab and the thread becomes an orchestrator. It splits the work into child threads, each with its own branch, worktree and pull request, and supervises them: it can see each child's state, pull request, checks and open findings, message an idle child or ask it for information, and stop the whole run in one click. A run summary shows progress and the usage across all of its threads. A message to a child never interrupts a turn that is running, and it is treated as data, never as an approval. How many children run at once is a per-project setting, and the rest wait in a queue.
+
+The orchestrator can order the run's pull requests and put an ordinary merge card in front of you. Only your click merges it. You can also approve **auto merge** for one run, on the run's card. It answers that run's merge cards only, is held in memory, and ends when you revoke it, stop the run, the run finishes, you change security level or you quit the app. Releases and board deletions are never answered this way.
+
+## Planning mode
+
+Turn on the plan toggle beside the subthread button and the engine drafts a plan in its own plan mode before it changes anything. The plan arrives as a card, and no level or earlier approval answers it for you. Turn a reviewed plan into board cards, with prerequisites between them.
+
 ## Asking your agent to use Kulula's tools
 
 Each engine is told which Kulula tools it has when a session starts, so you can ask for them in plain language. Nothing needs installing or configuring.
@@ -186,6 +202,9 @@ Each engine is told which Kulula tools it has when a session starts, so you can 
 | `start_worktree` | On a thread with no branch yet, asks to move that same thread onto a new branch in its own worktree, without starting a child thread. You can decline. |
 | `board` | Reads the board and creates, edits and moves cards, adds notes and subtasks, and asks you to delete a card. Available once the board is on. |
 | `report_to_parent` | Subthreads only, on any engine: sends a short message to the thread that started them. |
+| `child_status` | Orchestrator threads only: reads each child's state, pull request, checks, open findings and last report, and the run itself. Changes nothing. |
+| `message_child` | Orchestrator threads only: tells an idle direct child something, or asks it for information. The child answers with its own report. |
+| `merge_pull_request` | Orchestrator threads only: reads a pull request's merge facts and order, and puts a merge card in front of you. Only your click merges it, unless you approved auto merge for the run. |
 
 Example prompts:
 
