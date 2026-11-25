@@ -6,6 +6,37 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Acqui Agents</title>
         <item>
+            <title>0.28.0</title>
+            <pubDate>Thu, 26 Nov 2026 09:07:42 +1000</pubDate>
+            <sparkle:version>29</sparkle:version>
+            <sparkle:shortVersionString>0.28.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Orchestrator runs, planning mode and a Board tab
+
+- Orchestrator runs: an orchestrator thread can supervise its child threads, see each one's pull request and checks, message an idle child or ask it for information, and stop the whole run in one click. A run summary shows progress and usage across all of its threads.
+- Merging from an orchestrator: it can order its pull requests and put a merge card in front of you. Only your click merges. Auto merge is an optional approval you give for one run on its card; it ends when you revoke it, stop the run, the run finishes, you change security level, or you quit the app.
+- Planning mode: ask the engine to draft a plan before it changes anything, then turn a reviewed plan into board cards. The plan toggle now sits beside the subthread button.
+- A new Board tab in the sidebar opens a project's board without selecting a thread. The Chat, Board and Orchestrator switcher is always visible, and the right-hand panel always shows.
+- Spawn limits are a per-project setting, and subthreads over the limit wait in a queue instead of being refused.
+- Schedules can target a heartbeat for an orchestrator run. A heartbeat only wakes the orchestrator when a child's state, pull request or checks changed, and stops when the run ends.
+- Agents can now set every card field you can, including prerequisites, tags, release and model.
+- Merge confirmation now lists open issues, in-progress fixes, failing or unfinished checks, drafts, requested changes and a branch that is behind its base, and names a worktree that will be deleted.
+- After a merge, pull requests stacked on the merged branch are retargeted while the merged branch is kept until they have moved.
+- Deleting the last thread attached to a worktree offers to delete the worktree too.
+- The build queue reports build warnings on success and shows their count on its card.
+- Fix options now come before the button that starts the run, each composer button has its own tooltip, and composer icons line up.
+
+## Fixes
+
+- Large workspaces open much faster: the sidebar no longer loads every thread's transcript at launch, which could freeze the window for many seconds.
+- The board no longer redraws every card while a thread streams, which caused multi-second freezes on big boards.
+- The branch viewer no longer lists a worktree after it is removed, and says why a local branch could not be deleted.
+- A Fix's follow-up commit, push and Auto Resolve keep working if you navigate elsewhere in the review panel during the fix, and no longer close a finding you reopened meanwhile.
+]]></description>
+            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.28.0/Kulula-0.28.0.dmg" length="14553115" type="application/octet-stream" sparkle:edSignature="ahb/LshBYWY57WPbJNTLb4MDcIAjSD6B07B3u9hUGKC+0n69tNSGwlr9kIlFKOolPUWfmtyBbNi/WmdIwB9KBA=="/>
+        </item>
+        <item>
             <title>0.27.0</title>
             <pubDate>Sat, 21 Nov 2026 09:36:38 +1000</pubDate>
             <sparkle:version>28</sparkle:version>
@@ -59,42 +90,9 @@ Cards can now belong to a release version. Create versions, assign a card to one
 ]]></description>
             <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.26.0/Kulula-0.26.0.dmg" length="12792326" type="application/octet-stream" sparkle:edSignature="DNxLIdrbSolO/n/3ygSLUu2opwA2P1jbS2iclYQQloF3lWkPSKsto6PHO5BYZujNLouUN6Sf7SRTmRIH5tD/CA=="/>
         </item>
-        <item>
-            <title>0.25.0</title>
-            <pubDate>Mon, 16 Nov 2026 00:42:38 +0200</pubDate>
-            <sparkle:version>26</sparkle:version>
-            <sparkle:shortVersionString>0.25.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Kanban task board
-
-A new Board tab shows your workspace's tasks as cards in columns. Turn it on from the tab, then add, edit, reorder and move cards by drag or from a menu. Cards can carry notes and subtasks, and the tab has a card filter, per-column sorting, and show/hide for columns.
-
-- Moving a card follows the work. A thread started for a card moves it to In Progress, then In Review when its pull request opens, then Done when it merges. Cards show a git status icon and the pull request number.
-- A column can run a prompt on an agent whenever a card arrives, and you can give a column or a task its own model.
-- Agents can read the board, edit and move cards, and ask you to delete one. Nothing is deleted until you click Delete on that card.
-- Import tasks from a tracker file or a folder of them. The agent proposes cards and nothing is added until you approve the batch.
-
-## Threads can move to their own branch
-
-An agent working on the default branch can now move its thread onto a new branch in its own worktree, without starting a separate subthread.
-
-## Fixes and review
-
-- A subthread request you have accepted keeps going when the agent's turn ends. Antigravity ends its turn while a spawn is still running, which used to cancel it and leave a stray branch behind. Antigravity also gets Kulula's tools directly in its tool list.
-- Auto Commit/Push after a Fix now tells you in the thread why it did not run.
-- Findings no longer get stuck on "fixing" after a fix turn is refused or interrupted, so Fix and Auto Fix can retry them.
-- A review panel refresh no longer erases the "fixed" status an Auto Fix run just recorded.
-
-## Look and feel
-
-Engines now show vector logos instead of text glyphs, and errors and warnings in the review panel tabs share one alert style.
-]]></description>
-            <enclosure url="https://github.com/ricruss/kulula/releases/download/v0.25.0/Kulula-0.25.0.dmg" length="12461039" type="application/octet-stream" sparkle:edSignature="Y/u/eGbNeEES+r/2Eeqqi2OjgygcAgfLSHD+FhaohlDZw0hCp8TVDuR7yhwdd2jNvgrpR0RSf5qS2aJbhS4XCg=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: K5iyQvF5iMKPTYPQd+QxwPROsaVLpe3wKD1HDE4SHY0apoODHSB4rH5R0bSAHJdbTKUPUqNlAlMv6LzCGIC/Cw==
-length: 7207
+edSignature: WIKw91imqTXBw9T2RJTK7YYJNW7+y6P4Wbuz857MBGZzIeV+e1esvBn0yrxiubKcTTorRS/MEfkojt2BRlu3BQ==
+length: 8001
 -->
